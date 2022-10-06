@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2537006823784377587
+--- !u!1 &1987402739442078159
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2537006823784377590}
-  - component: {fileID: 2537006823784377585}
-  - component: {fileID: 2537006823784377584}
-  - component: {fileID: 1957080214}
-  - component: {fileID: 1957080219}
-  - component: {fileID: 1957080215}
+  - component: {fileID: 1987402739442078146}
+  - component: {fileID: 1987402739442078145}
+  - component: {fileID: 1987402739442078144}
+  - component: {fileID: 153812517}
+  - component: {fileID: 153812522}
+  - component: {fileID: 153812518}
   m_Layer: 0
   m_Name: Tomato
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2537006823784377590
+--- !u!4 &1987402739442078146
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537006823784377587}
+  m_GameObject: {fileID: 1987402739442078159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.24, y: -0.14, z: 0}
+  m_LocalPosition: {x: 10.115, y: -0.14, z: 0}
   m_LocalScale: {x: 0.3066836, y: 0.011092898, z: 0.3066836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2537006823784377585
+--- !u!33 &1987402739442078145
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537006823784377587}
+  m_GameObject: {fileID: 1987402739442078159}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2537006823784377584
+--- !u!23 &1987402739442078144
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537006823784377587}
+  m_GameObject: {fileID: 1987402739442078159}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 992ffa8679cd40f4ab6936c59ad217b1, type: 2}
+  - {fileID: 2100000, guid: 4d2963d46f6a8f142b3707926b29e4f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,26 +86,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1957080214
+--- !u!65 &153812517
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537006823784377587}
+  m_GameObject: {fileID: 1987402739442078159}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 1.9999999, z: 1.0000002}
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!54 &1957080219
+--- !u!54 &153812522
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537006823784377587}
+  m_GameObject: {fileID: 1987402739442078159}
   serializedVersion: 2
   m_Mass: 3
   m_Drag: 0
@@ -115,18 +115,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1957080215
+--- !u!114 &153812518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537006823784377587}
+  m_GameObject: {fileID: 1987402739442078159}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f18e9fbc6826fd44b97f105c3cc3615e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloneObj: {fileID: 2537006823784377590}
+  cloneObj: {fileID: 1987402739442078146}
   spawnPosition: {fileID: 0}
-  foodValue: 0
+  foodValue: 2000

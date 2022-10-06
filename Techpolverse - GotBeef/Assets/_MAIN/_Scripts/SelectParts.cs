@@ -5,22 +5,30 @@ using UnityEngine;
 
 public class SelectParts : MonoBehaviour
 {
+   [Header("Object Transform")]
    public Transform cloneObj;
-   public Transform spawnPosition;
-   public string foodValue; 
+   [SerializeField] Transform spawnPosition;
+   
+   [Header("Value")]
+   public string foodValue;
+
+   private void Awake()
+   {
+      spawnPosition = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
+   }
 
    private void OnMouseDown()
    {
-      if (gameObject.name == "Bottom Bun")
+      if (gameObject.name == "Bottom Bun(Clone)")
          Instantiate(cloneObj, spawnPosition.position, cloneObj.rotation);
       
-      if (gameObject.name == "Top Bun")
+      if (gameObject.name == "Top Bun(Clone)")
          Instantiate(cloneObj, spawnPosition.position, cloneObj.rotation);
       
-      if (gameObject.name == "Cheese")
+      if (gameObject.name == "Cheese(Clone)")
          Instantiate(cloneObj, spawnPosition.position, cloneObj.rotation);
       
-      if (gameObject.name == "Meat")
+      if (gameObject.name == "Meat(Clone)")
          Instantiate(cloneObj, spawnPosition.position, cloneObj.rotation);
 
       GameFlow.instance.plateValue += foodValue;
