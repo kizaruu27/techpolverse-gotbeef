@@ -130,3 +130,4 @@ MonoBehaviour:
   cloneObj: {fileID: 1987402739442078146}
   spawnPosition: {fileID: 0}
   foodValue: 2000
+  foodParts: 4

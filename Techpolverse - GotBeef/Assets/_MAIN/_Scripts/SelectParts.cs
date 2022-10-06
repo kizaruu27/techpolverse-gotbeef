@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class SelectParts : MonoBehaviour
 {
+   public enum FoodParts
+   {
+      BottomBun,
+      Meat,
+      Cheese,
+      Cucumber,
+      Tomato,
+      TopBun
+   }
+
    [Header("Object Transform")]
    public Transform cloneObj;
    [SerializeField] Transform spawnPosition;
@@ -12,6 +22,9 @@ public class SelectParts : MonoBehaviour
    [Header("Value")]
    public string foodValue;
 
+
+   public FoodParts foodParts;
+   
    private void Awake()
    {
       spawnPosition = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
@@ -19,17 +32,24 @@ public class SelectParts : MonoBehaviour
 
    private void OnMouseDown()
    {
-      if (gameObject.name == "Bottom Bun(Clone)")
+      if (foodParts == FoodParts.BottomBun)
          cloneObj.position = spawnPosition.position;
       
-      if (gameObject.name == "Top Bun(Clone)")
+      if (foodParts == FoodParts.Meat)
          cloneObj.position = spawnPosition.position;
       
-      if (gameObject.name == "Cheese(Clone)")
+      if (foodParts == FoodParts.Cheese)
          cloneObj.position = spawnPosition.position;
       
-      if (gameObject.name == "Meat(Clone)")
+      if (foodParts == FoodParts.Cucumber)
          cloneObj.position = spawnPosition.position;
+
+      if (foodParts == FoodParts.Tomato)
+         cloneObj.position = spawnPosition.position;
+      
+      if (foodParts == FoodParts.TopBun)
+         cloneObj.position = spawnPosition.position;
+
 
       GameFlow.instance.plateValue += foodValue;
       Debug.Log(GameFlow.instance.plateValue + " " + GameFlow.instance.orderValue);
