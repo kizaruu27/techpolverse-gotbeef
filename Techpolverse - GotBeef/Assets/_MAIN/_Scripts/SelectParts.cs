@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SelectParts : MonoBehaviour
 {
+   public ScriptableValue plateValue;
+   
    public enum FoodParts
    {
       BottomBun,
@@ -51,7 +53,7 @@ public class SelectParts : MonoBehaviour
          cloneObj.position = spawnPosition.position;
 
 
-      GameFlow.instance.plateValue += foodValue;
-      Debug.Log(GameFlow.instance.plateValue + " " + GameFlow.instance.orderValue);
+      plateValue.value += foodValue;
+      Debug.Log(plateValue.value + " " + GameFlow.instance.orderValue);
    }
 }

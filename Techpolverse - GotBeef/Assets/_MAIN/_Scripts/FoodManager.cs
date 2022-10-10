@@ -15,6 +15,8 @@ public class FoodManager : MonoBehaviour
     public GameObject ChooseIngredientUI;
     public GameObject BurgerUI;
 
+    public ScriptableValue plateValue;
+
 
     #region SetIngredientValue
     
@@ -89,7 +91,7 @@ public class FoodManager : MonoBehaviour
 
     public void BurgerCheck()
     {
-        if (GameFlow.instance.plateValue == GameFlow.instance.orderValue)
+        if (plateValue.value == GameFlow.instance.orderValue)
             Debug.Log("Correct");
         else
             Debug.Log("Wrong!!");
@@ -104,7 +106,12 @@ public class FoodManager : MonoBehaviour
         cucumber = 0;
         topBun = 0;
 
- 
+        
+    }
+
+    public void ResetBurger()
+    {
+        plateValue.value = null;
     }
 
     #endregion

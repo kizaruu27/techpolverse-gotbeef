@@ -10,6 +10,8 @@ public class SelectFood : MonoBehaviour
     [Header("Food Prefabs")]
     public GameObject[] foodPartsPrefabs;
 
+    public ScriptableValue plateValue;
+
     int spawnIndex;
 
 
@@ -28,7 +30,7 @@ public class SelectFood : MonoBehaviour
 
     public void onClickReset()
     {
-        GameFlow.instance.plateValue = null;
+        plateValue.value = null;
         spawnIndex = 0;
         GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
 

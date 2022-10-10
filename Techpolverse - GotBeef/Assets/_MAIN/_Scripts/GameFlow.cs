@@ -6,6 +6,8 @@ using UnityEngine;
 public class GameFlow : MonoBehaviour
 {
     public static GameFlow instance;
+
+    public ScriptableValue plate;
     
     [Header("Food Value")]
     public string orderValue;

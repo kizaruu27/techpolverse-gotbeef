@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18e9fbc6826fd44b97f105c3cc3615e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
   cloneObj: {fileID: 742524145278057761}
   spawnPosition: {fileID: 0}
   foodValue: 3
