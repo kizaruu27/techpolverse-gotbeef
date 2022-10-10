@@ -245,5 +245,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloneObj: {fileID: 3589446250781147203}
   spawnPosition: {fileID: 0}
-  foodValue: 1
+  foodValue: 6
   foodParts: 5

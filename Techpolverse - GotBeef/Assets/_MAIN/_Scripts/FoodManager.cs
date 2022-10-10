@@ -13,6 +13,7 @@ public class FoodManager : MonoBehaviour
         topBun;
 
     public GameObject ChooseIngredientUI;
+    public GameObject BurgerUI;
 
 
     #region SetIngredientValue
@@ -61,6 +62,7 @@ public class FoodManager : MonoBehaviour
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
+                BurgerUI.SetActive(true);
             }
             else
             {
@@ -74,6 +76,7 @@ public class FoodManager : MonoBehaviour
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
+                BurgerUI.SetActive(true);
             }
                 
             else
@@ -84,6 +87,14 @@ public class FoodManager : MonoBehaviour
         }
     }
 
+    public void BurgerCheck()
+    {
+        if (GameFlow.instance.plateValue == GameFlow.instance.orderValue)
+            Debug.Log("Correct");
+        else
+            Debug.Log("Wrong!!");
+    }
+
     public void OnClickReset()
     {
         bottomBun = 0;
@@ -92,6 +103,8 @@ public class FoodManager : MonoBehaviour
         cheese = 0;
         cucumber = 0;
         topBun = 0;
+
+ 
     }
 
     #endregion

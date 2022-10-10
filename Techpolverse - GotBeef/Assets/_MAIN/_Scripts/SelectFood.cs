@@ -28,6 +28,7 @@ public class SelectFood : MonoBehaviour
 
     public void onClickReset()
     {
+        GameFlow.instance.plateValue = null;
         spawnIndex = 0;
         GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
 
@@ -50,5 +51,10 @@ public class SelectFood : MonoBehaviour
     public void OnClickSetFood(string food)
     {
         GameFlow.instance.foodName = food;
+    }
+
+    public void OnClickSetOrderValue(string value)
+    {
+        GameFlow.instance.orderValue = value;
     }
 }
