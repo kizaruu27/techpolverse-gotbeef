@@ -8,8 +8,9 @@ public class GameFlow : MonoBehaviour
     public static GameFlow instance;
     
     [Header("Food Value")]
-    public string orderValue = "12101";
+    public string orderValue;
     public string plateValue;
+    public string foodName;
 
     private void Awake()
     {

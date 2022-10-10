@@ -46,4 +46,9 @@ public class SelectFood : MonoBehaviour
             foods[i].transform.position = spawnPoints[i].position;
         }
     }
+
+    public void OnClickSetFood(string food)
+    {
+        GameFlow.instance.foodName = food;
+    }
 }
