@@ -16,13 +16,15 @@ public class FoodManager : MonoBehaviour
     public GameObject BurgerUI;
 
     public ScriptableValue plateValue;
+    
+    
 
 
     #region SetIngredientValue
     
     public void SetBottomBunValue()
     {
-        bottomBun += 1;
+        bottomBun += 1;;
     }
 
     public void SetMeatValue()
@@ -115,4 +117,16 @@ public class FoodManager : MonoBehaviour
     }
 
     #endregion
+
+    public void OnClickSetInteractable()
+    {
+        SelectParts[] parts = FindObjectsOfType<SelectParts>();
+
+        foreach (var foodparts in parts)
+        {
+            foodparts.isInteractable = true;
+        }
+
+    }
+
 }

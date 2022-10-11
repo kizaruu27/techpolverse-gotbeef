@@ -6,6 +6,7 @@ using UnityEngine;
 public class SelectParts : MonoBehaviour
 {
    public ScriptableValue plateValue;
+   public bool isInteractable;
    
    public enum FoodParts
    {
@@ -34,26 +35,43 @@ public class SelectParts : MonoBehaviour
 
    private void OnMouseDown()
    {
-      if (foodParts == FoodParts.BottomBun)
-         cloneObj.position = spawnPosition.position;
-      
-      if (foodParts == FoodParts.Meat)
-         cloneObj.position = spawnPosition.position;
-      
-      if (foodParts == FoodParts.Cheese)
-         cloneObj.position = spawnPosition.position;
-      
-      if (foodParts == FoodParts.Cucumber)
-         cloneObj.position = spawnPosition.position;
+      if (isInteractable)
+      {
+         switch (foodParts)
+         {
+            case FoodParts.BottomBun:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               break;
+            case FoodParts.Meat:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               break;
+            case  FoodParts.Cheese:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               break;
+            case FoodParts.Cucumber:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               break;
+            case FoodParts.Tomato:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               break;
+            case FoodParts.TopBun:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               break;
+            
+         }
+         plateValue.value += foodValue;
+         Debug.Log(plateValue.value + " " + GameFlow.instance.orderValue);
+      }
+   }
 
-      if (foodParts == FoodParts.Tomato)
-         cloneObj.position = spawnPosition.position;
-      
-      if (foodParts == FoodParts.TopBun)
-         cloneObj.position = spawnPosition.position;
-
-
-      plateValue.value += foodValue;
-      Debug.Log(plateValue.value + " " + GameFlow.instance.orderValue);
+   void DeactivateInteraction()
+   {
+      isInteractable = false;
    }
 }
