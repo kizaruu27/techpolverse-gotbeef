@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22817c234bfac254cbb9fa247ba9e966, type: 3}
+  m_Name: Beef Burger
+  m_EditorClassIdentifier: 
+  foodName: Beef Burger
+  foodSprite: {fileID: 21300000, guid: f6aa64536ccb3ab44a4175c0d22a2f35, type: 3}
+  foodDescription: this is burger small
+  formulas:
+  - bread
+  - tomato
+  - beef
+  - onion
