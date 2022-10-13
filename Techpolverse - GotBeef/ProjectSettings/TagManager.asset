@@ -8,6 +8,9 @@ TagManager:
   - SpawnPoint
   - Bottom Bun
   - GameManager
+  - Handle
+  - MakePatty
+  - BalanceCookingUI
   layers:
   - Default
   - TransparentFX

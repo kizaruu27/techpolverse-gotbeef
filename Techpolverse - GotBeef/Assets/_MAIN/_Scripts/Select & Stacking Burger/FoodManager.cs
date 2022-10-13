@@ -1,9 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FoodManager : MonoBehaviour
 {
+    public static FoodManager instance;
+    
+    [Header("Events")]
+    public UnityEvent OnBalanceCookingFinished;
+
+    [Header("Ingredients")]
     public int
         bottomBun,
         beef,
@@ -13,13 +21,20 @@ public class FoodManager : MonoBehaviour
         cucumber,
         topBun;
 
+    [Header("UI Components")]
     public GameObject ChooseIngredientUI;
     public GameObject BurgerUI;
 
+    [Header("Scriptable Value")]
     public ScriptableValue plateValue;
     public Food BeefBurger;
     public Food ChickenBurger;
-    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     #region SetIngredientValue
     
     public void SetBottomBunValue()
@@ -72,7 +87,6 @@ public class FoodManager : MonoBehaviour
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
                 BurgerUI.SetActive(true);
-                SetInteractable();
             }
             else
             {
@@ -82,12 +96,11 @@ public class FoodManager : MonoBehaviour
 
         if (GameFlow.instance.foodName == ChickenBurger.foodName)
         {
-            if (topBun == 1 && cucumber == 1 && tomato == 0 && beef == 0 && bottomBun == 1 && cheese == 1 && chickenBeef == 1)
+            if (topBun == 1 && cucumber == 1 && tomato == 1 && beef == 0 && bottomBun == 1 && cheese == 1 && chickenBeef == 1)
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
                 BurgerUI.SetActive(true);
-                SetInteractable();
             }
                 
             else
@@ -114,7 +127,8 @@ public class FoodManager : MonoBehaviour
         cheese = 0;
         cucumber = 0;
         topBun = 0;
-        chickenBeef = 0;
+
+        
     }
 
     public void ResetBurger()
@@ -124,15 +138,30 @@ public class FoodManager : MonoBehaviour
 
     #endregion
 
-    public void SetInteractable()
+    public void OnClickSetInteractable()
     {
         SelectParts[] parts = FindObjectsOfType<SelectParts>();
-
         foreach (var foodparts in parts)
         {
             foodparts.isInteractable = true;
         }
+        
+        BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
+        foreach (var beefSelection in beef)
+        {
+            beefSelection.isInteractable = true;
+        }
 
+    }
+
+    public void OnFinishBalanceCook()
+    {
+        BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
+        foreach (var beefSelection in beef)
+        {
+            beefSelection.isMaked = true;
+            beefSelection.isInteractable = true;
+        }
     }
 
 }

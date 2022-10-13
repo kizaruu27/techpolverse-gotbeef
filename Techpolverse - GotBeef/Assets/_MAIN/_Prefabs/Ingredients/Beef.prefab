@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5279701791167646521}
   - component: {fileID: 1280897218}
   - component: {fileID: 1280897223}
-  - component: {fileID: 1280897219}
+  - component: {fileID: 7485428746971005008}
   m_Layer: 0
   m_Name: Beef
   m_TagString: Food
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1280897219
+--- !u!114 &7485428746971005008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,11 +124,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5279701791167646520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f18e9fbc6826fd44b97f105c3cc3615e, type: 3}
+  m_Script: {fileID: 11500000, guid: b854d7aed5d80a84a9c391fad70474ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
+  isInteractable: 0
+  isMaked: 0
+  isCooked: 0
   cloneObj: {fileID: 5279701791167646523}
   spawnPosition: {fileID: 0}
-  foodValue: 2
-  foodParts: 1
+  cookPosition: {fileID: 0}
+  makePattyPostion: {fileID: 0}
+  foodValue: 
+  foodParts: 0

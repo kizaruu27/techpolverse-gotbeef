@@ -21,6 +21,8 @@ public class CookingManager : MonoBehaviour
     Debug.Log(_totalTimeInArea.ToString("0.00"));
     if (_isGameOver)
     {
+      FoodManager.instance.OnBalanceCookingFinished.Invoke();
+      
       _totalTimeInArea = _timerUI.timeInArea;
       _cookingResultUI.gameObject.SetActive(true);
 
