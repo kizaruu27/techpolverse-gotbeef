@@ -6,7 +6,8 @@ public class FoodManager : MonoBehaviour
 {
     public int
         bottomBun,
-        meat,
+        beef,
+        chickenBeef,
         cheese,
         tomato,
         cucumber,
@@ -16,10 +17,9 @@ public class FoodManager : MonoBehaviour
     public GameObject BurgerUI;
 
     public ScriptableValue plateValue;
+    public Food BeefBurger;
+    public Food ChickenBurger;
     
-    
-
-
     #region SetIngredientValue
     
     public void SetBottomBunValue()
@@ -29,7 +29,7 @@ public class FoodManager : MonoBehaviour
 
     public void SetMeatValue()
     {
-        meat += 1;
+        beef += 1;
     }
 
     public void SetCheeseValue()
@@ -51,6 +51,11 @@ public class FoodManager : MonoBehaviour
     {
         topBun =+ 1;
     }
+
+    public void SetChickenBeef()
+    {
+        chickenBeef += 1;
+    }
     
     #endregion
 
@@ -60,13 +65,14 @@ public class FoodManager : MonoBehaviour
 
     public void FoodChecker()
     {
-        if (GameFlow.instance.foodName == "Burger A")
+        if (GameFlow.instance.foodName == BeefBurger.foodName)
         {
-            if (topBun == 1 && cucumber == 1 && tomato == 1 && meat == 1 && bottomBun == 1 && cheese == 0)
+            if (topBun == 1 && cucumber == 1 && tomato == 1 && beef == 1 && bottomBun == 1 && cheese == 1 && chickenBeef == 0)
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
                 BurgerUI.SetActive(true);
+                SetInteractable();
             }
             else
             {
@@ -74,13 +80,14 @@ public class FoodManager : MonoBehaviour
             }
         }
 
-        if (GameFlow.instance.foodName == "Burger B")
+        if (GameFlow.instance.foodName == ChickenBurger.foodName)
         {
-            if (topBun == 1 && cucumber == 1 && tomato == 0 && meat == 1 && bottomBun == 1 && cheese == 1)
+            if (topBun == 1 && cucumber == 1 && tomato == 0 && beef == 0 && bottomBun == 1 && cheese == 1 && chickenBeef == 1)
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
                 BurgerUI.SetActive(true);
+                SetInteractable();
             }
                 
             else
@@ -102,13 +109,12 @@ public class FoodManager : MonoBehaviour
     public void OnClickReset()
     {
         bottomBun = 0;
-        meat = 0;
+        beef = 0;
         tomato = 0;
         cheese = 0;
         cucumber = 0;
         topBun = 0;
-
-        
+        chickenBeef = 0;
     }
 
     public void ResetBurger()
@@ -118,7 +124,7 @@ public class FoodManager : MonoBehaviour
 
     #endregion
 
-    public void OnClickSetInteractable()
+    public void SetInteractable()
     {
         SelectParts[] parts = FindObjectsOfType<SelectParts>();
 

@@ -28,6 +28,8 @@ public class DisplayMenuSelection : MonoBehaviour
             BtnMenuHandler handler = objMenu.GetComponent<BtnMenuHandler>();
             handler._btnIndex = index;
             handler._image.sprite = item.foodSprite;
+            handler.foodName = item.foodName;
+            handler.orderValue = item.orderValue;
         }
     }
 

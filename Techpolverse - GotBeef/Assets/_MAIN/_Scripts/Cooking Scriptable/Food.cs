@@ -8,4 +8,5 @@ public class Food : ScriptableObject
     [TextArea]
     public string foodDescription;
     public string[] formulas;
+    public string orderValue;
 }

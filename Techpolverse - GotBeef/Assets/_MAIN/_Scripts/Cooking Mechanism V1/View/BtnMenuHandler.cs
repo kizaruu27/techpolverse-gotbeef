@@ -12,6 +12,9 @@ public class BtnMenuHandler : MonoBehaviour
     [FormerlySerializedAs("_FlowManager")] [Header("Flow Manager")]
     public V1_FlowManager v1FlowManager;
 
+    public string foodName;
+    public string orderValue;
+
     private void Start()
     {
         v1FlowManager = FindObjectOfType<V1_FlowManager>();
@@ -21,5 +24,11 @@ public class BtnMenuHandler : MonoBehaviour
     {
         // Debug.Log($"Button Index: {_btnIndex}");
         v1FlowManager.ShowFoodDescription(_btnIndex);
+    }
+
+    public void OnClickSetFood()
+    {
+        GameFlow.instance.foodName = foodName;
+        GameFlow.instance.orderValue = orderValue;
     }
 }
