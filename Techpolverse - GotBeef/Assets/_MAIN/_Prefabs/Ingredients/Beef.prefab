@@ -135,5 +135,6 @@ MonoBehaviour:
   spawnPosition: {fileID: 0}
   cookPosition: {fileID: 0}
   makePattyPostion: {fileID: 0}
-  foodValue: 
+  foodValue: 2
   foodParts: 0
+  uiHandler: {fileID: 0}

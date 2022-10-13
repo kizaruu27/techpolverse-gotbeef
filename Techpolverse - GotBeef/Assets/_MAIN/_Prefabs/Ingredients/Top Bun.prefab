@@ -244,7 +244,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
+  isInteractable: 0
+  isMaked: 0
+  isCooked: 0
   cloneObj: {fileID: 3589446250781147203}
   spawnPosition: {fileID: 0}
-  foodValue: 6
+  cookPosition: {fileID: 0}
+  makePattyPostion: {fileID: 0}
+  foodValue: 7
   foodParts: 5
