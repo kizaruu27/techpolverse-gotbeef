@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class FoodManager : MonoBehaviour
 {
@@ -24,6 +26,8 @@ public class FoodManager : MonoBehaviour
     [Header("UI Components")]
     public GameObject ChooseIngredientUI;
     public GameObject BurgerUI;
+    public GameObject WarningUI;
+    public TextMeshProUGUI warningText;
 
     [Header("Scriptable Value")]
     public ScriptableValue plateValue;
@@ -90,7 +94,7 @@ public class FoodManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Wrong!!");
+                Warning("Bahan tidak sesuai!");
             }
         }
 
@@ -105,7 +109,7 @@ public class FoodManager : MonoBehaviour
                 
             else
             {
-                Debug.Log("Wrong");
+                Warning("Bahan tidak sesuai!");
             }
                 
         }
@@ -116,7 +120,7 @@ public class FoodManager : MonoBehaviour
         if (plateValue.value == GameFlow.instance.orderValue)
             Debug.Log("Correct");
         else
-            Debug.Log("Wrong!!");
+            Warning("Urutan burger salah!");
     }
 
     public void OnClickReset()
@@ -162,6 +166,13 @@ public class FoodManager : MonoBehaviour
             beefSelection.isMaked = true;
             beefSelection.isInteractable = true;
         }
+    }
+
+    void Warning(string messege)
+    {
+        WarningUI.SetActive(true);
+        warningText.text = messege;
+        Debug.Log("Wrong");
     }
 
 }
