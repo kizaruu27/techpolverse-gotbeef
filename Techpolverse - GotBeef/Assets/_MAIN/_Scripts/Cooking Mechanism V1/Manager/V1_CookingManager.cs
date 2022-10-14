@@ -89,7 +89,7 @@ public class V1_CookingManager : MonoBehaviour
     public void OnClickFinishCook()
     {
         StartCoroutine(DisplayPopUpResult());
-
+        FoodManager.instance.OnTimingCookingFinished.Invoke();
         ResetChallengeSetting();
     }
 

@@ -53,6 +53,11 @@ public class BeefSelection : MonoBehaviour
                     uiHandler.ActivateBalanceCookingUI();
                     DeactivateInteraction();
                 }
+                else if (!isCooked)
+                {
+                    uiHandler.ActivateTimingCookingUI();
+                    DeactivateInteraction();
+                }
                 else
                 {
                     cloneObj.position = spawnPosition.position;

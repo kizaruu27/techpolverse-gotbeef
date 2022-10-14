@@ -12,6 +12,7 @@ public class FoodManager : MonoBehaviour
     
     [Header("Events")]
     public UnityEvent OnBalanceCookingFinished;
+    public UnityEvent OnTimingCookingFinished;
 
     [Header("Ingredients")]
     public int
@@ -123,7 +124,7 @@ public class FoodManager : MonoBehaviour
             Warning("Urutan burger salah!");
     }
 
-    public void OnClickReset()
+    public void OnClickResetIngredients()
     {
         bottomBun = 0;
         beef = 0;
@@ -131,8 +132,7 @@ public class FoodManager : MonoBehaviour
         cheese = 0;
         cucumber = 0;
         topBun = 0;
-
-        
+        chickenBeef = 0;
     }
 
     public void ResetBurger()
@@ -164,6 +164,16 @@ public class FoodManager : MonoBehaviour
         foreach (var beefSelection in beef)
         {
             beefSelection.isMaked = true;
+            beefSelection.isInteractable = true;
+        }
+    }
+
+    public void OnFinishTimingCook()
+    {
+        BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
+        foreach (var beefSelection in beef)
+        {
+            beefSelection.isCooked = true;
             beefSelection.isInteractable = true;
         }
     }
