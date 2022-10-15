@@ -16,8 +16,10 @@ MonoBehaviour:
   foodSprite: {fileID: 21300000, guid: f6aa64536ccb3ab44a4175c0d22a2f35, type: 3}
   foodDescription: this is burger small
   formulas:
-  - bread
+  - bottom bun
+  - cucumber
   - tomato
+  - cheese
   - beef
-  - onion
+  - top bun
   orderValue: 124567

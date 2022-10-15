@@ -71,19 +71,19 @@ public class V1_CookingManager : MonoBehaviour
         //? Reset setting
         duration = setDuration;
         sliderSpeed = setSliderSpeed;
-        nextActionTime = 0.0f;
+        // nextActionTime = 0.0f;
     }
 
     private void Update()
     {
         if (isPlay)
-            slider.value = Mathf.PingPong(sliderSpeed * Time.time, 10f);
+            slider.value = Mathf.PingPong(Time.time * sliderSpeed, 10f);
 
         // Debug.Log(GenerateStatusResult);
 
         Timer();
 
-        SetDinamicdifficulty();
+        // SetDinamicdifficulty();
     }
 
     public void OnClickFinishCook()
@@ -130,18 +130,17 @@ public class V1_CookingManager : MonoBehaviour
         float minutes = Mathf.FloorToInt((duration / 60));
         float seconds = Mathf.FloorToInt((duration % 60));
 
-        return string.Format("{0:00}:{1:00}", minutes, seconds);
+        return string.Format("{1:00}", minutes, seconds);
     }
 
     public void SetDinamicdifficulty()
     {
         if (!isPlay) return;
-        sliderSpeed += speedDifficulty * Time.deltaTime;
 
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
-
+            sliderSpeed += speedDifficulty * Time.deltaTime;
         }
     }
 }

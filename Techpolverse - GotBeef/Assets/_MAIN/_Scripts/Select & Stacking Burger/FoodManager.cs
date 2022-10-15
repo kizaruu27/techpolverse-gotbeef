@@ -5,11 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Linq;
 
 public class FoodManager : MonoBehaviour
 {
     public static FoodManager instance;
-    
+
     [Header("Events")]
     public UnityEvent OnBalanceCookingFinished;
     public UnityEvent OnTimingCookingFinished;
@@ -30,10 +31,12 @@ public class FoodManager : MonoBehaviour
     public GameObject WarningUI;
     public TextMeshProUGUI warningText;
 
+    [Header("Recip Staging")]
+    public List<string> RecipStaging;
+
     [Header("Scriptable Value")]
     public ScriptableValue plateValue;
-    public Food BeefBurger;
-    public Food ChickenBurger;
+    public ItemDatabase _FoodDatabase;
 
     private void Awake()
     {
@@ -41,79 +44,79 @@ public class FoodManager : MonoBehaviour
     }
 
     #region SetIngredientValue
-    
+
     public void SetBottomBunValue()
     {
-        bottomBun += 1;;
+        bottomBun += 1;
+
+        RecipStaging.Add("bottom bun");
     }
 
     public void SetMeatValue()
     {
         beef += 1;
+        RecipStaging.Add("beef");
     }
 
     public void SetCheeseValue()
     {
         cheese += 1;
+        RecipStaging.Add("cheese");
     }
 
     public void SetTomatoValue()
     {
         tomato += 1;
+        RecipStaging.Add("tomato");
     }
 
     public void SetCucumberValue()
     {
         cucumber += 1;
+        RecipStaging.Add("cucumber");
     }
 
     public void SetTopBunnValue()
     {
-        topBun =+ 1;
+        topBun = +1;
+        RecipStaging.Add("top bun");
     }
 
     public void SetChickenBeef()
     {
         chickenBeef += 1;
+        RecipStaging.Add("chiken Beef");
     }
-    
+
     #endregion
 
 
 
     #region FoodManager
 
+    private void Update()
+    {
+
+    }
+
     public void FoodChecker()
     {
-        if (GameFlow.instance.foodName == BeefBurger.foodName)
+        var item = _FoodDatabase.foodList.Find((value) => value.foodName == GameFlow.instance.foodName);
+
+        for (int i = 0; i < RecipStaging.Count; i++)
         {
-            if (topBun == 1 && cucumber == 1 && tomato == 1 && beef == 1 && bottomBun == 1 && cheese == 1 && chickenBeef == 0)
+            if (!item.formulas.Contains(RecipStaging[i]))
+            {
+                Warning($"Bahan {RecipStaging[i]} tidak sesuai!");
+            }
+            else
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
                 BurgerUI.SetActive(true);
-            }
-            else
-            {
-                Warning("Bahan tidak sesuai!");
             }
         }
 
-        if (GameFlow.instance.foodName == ChickenBurger.foodName)
-        {
-            if (topBun == 1 && cucumber == 1 && tomato == 1 && beef == 0 && bottomBun == 1 && cheese == 1 && chickenBeef == 1)
-            {
-                Debug.Log("Correct");
-                ChooseIngredientUI.SetActive(false);
-                BurgerUI.SetActive(true);
-            }
-                
-            else
-            {
-                Warning("Bahan tidak sesuai!");
-            }
-                
-        }
     }
 
     public void BurgerCheck()
@@ -149,7 +152,7 @@ public class FoodManager : MonoBehaviour
         {
             foodparts.isInteractable = true;
         }
-        
+
         BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
         foreach (var beefSelection in beef)
         {

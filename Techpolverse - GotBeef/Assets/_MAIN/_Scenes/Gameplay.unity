@@ -4281,9 +4281,9 @@ MonoBehaviour:
   BurgerUI: {fileID: 844996099}
   WarningUI: {fileID: 1296851155}
   warningText: {fileID: 2111186892}
+  RecipStaging: []
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
-  BeefBurger: {fileID: 11400000, guid: 1bedaf2f841bf7a4d88db37ce4169afa, type: 2}
-  ChickenBurger: {fileID: 11400000, guid: 45c4d38d314c0d74a85187c29f1320b9, type: 2}
+  _FoodDatabase: {fileID: 11400000, guid: 549b2b136f3aed0439ccfe03e4f186bc, type: 2}
 --- !u!114 &886597040
 MonoBehaviour:
   m_ObjectHideFlags: 0

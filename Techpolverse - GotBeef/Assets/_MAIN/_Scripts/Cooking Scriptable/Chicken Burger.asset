@@ -16,7 +16,10 @@ MonoBehaviour:
   foodSprite: {fileID: 21300000, guid: b87d8c73b093bf54aad8af749efd240f, type: 3}
   foodDescription: chicken burger is maked with checken
   formulas:
-  - bun
-  - salad
+  - bottom bun
+  - cucumber
+  - tomato
   - cheese
+  - chiken Beef
+  - top bun
   orderValue: 12346
