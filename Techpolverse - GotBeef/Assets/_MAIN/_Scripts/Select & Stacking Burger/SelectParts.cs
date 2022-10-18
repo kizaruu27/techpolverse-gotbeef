@@ -7,13 +7,11 @@ public class SelectParts : MonoBehaviour
 {
    public ScriptableValue plateValue;
    public bool isInteractable;
-   public bool isMaked;
-   public bool isCooked;
-   
+
    public enum FoodParts
    {
       BottomBun,
-      Meat,
+      Beef,
       Cheese,
       Cucumber,
       Tomato,
@@ -23,9 +21,7 @@ public class SelectParts : MonoBehaviour
    [Header("Object Transform")]
    public Transform cloneObj;
    [SerializeField] Transform spawnPosition;
-   [SerializeField] Transform cookPosition;
-   [SerializeField] private Transform makePattyPostion;
-   
+
    [Header("Value")]
    public string foodValue;
 
@@ -35,19 +31,8 @@ public class SelectParts : MonoBehaviour
    private void Awake()
    {
       spawnPosition = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
-      makePattyPostion = GameObject.FindGameObjectWithTag("MakePatty").transform;
    }
-
-   private void Start()
-   {
-      if (foodParts == FoodParts.Meat)
-      {
-         isCooked = false;
-         isMaked = false;
-      }
-         
-   }
-
+   
    private void OnMouseDown()
    {
       if (isInteractable)
@@ -59,8 +44,10 @@ public class SelectParts : MonoBehaviour
                DeactivateInteraction();
                SetFoodValue();
                break;
-            case FoodParts.Meat:
-               
+            case FoodParts.Beef:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               SetFoodValue();
                break;
             case  FoodParts.Cheese:
                cloneObj.position = spawnPosition.position;

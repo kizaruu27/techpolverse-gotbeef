@@ -6,6 +6,7 @@ public class SelectFood : MonoBehaviour
 {
     [Header("Spawn Points")]
     public Transform[] spawnPoints;
+    public Transform pattyPosition;
     
     [Header("Food Prefabs")]
     public GameObject[] foodPartsPrefabs;
@@ -26,6 +27,12 @@ public class SelectFood : MonoBehaviour
         {
             Debug.Log("Slot Full!!");
         }
+    }
+
+    public void onClickSelectPatty(int index)
+    {
+        Instantiate(foodPartsPrefabs[index], pattyPosition.position, Quaternion.identity);
+        spawnIndex++;
     }
 
     public void onClickReset()

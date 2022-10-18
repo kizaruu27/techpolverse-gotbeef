@@ -33,6 +33,8 @@ public class FoodManager : MonoBehaviour
     public TextMeshProUGUI perfectCookingResultText;
     public TextMeshProUGUI balanceCookingResultText;
     public GameObject ResultUI;
+    public GameObject balanceCookingUI;
+    public GameObject timingCookingUI;
 
     [Header("Recip Staging")]
     public List<string> RecipStaging;
@@ -43,6 +45,7 @@ public class FoodManager : MonoBehaviour
 
     [SerializeField] V1_CookingManager _perfectCooking;
     [SerializeField] CookingResult _balanceCooking;
+    [SerializeField] CameraManager _cameraManager;
 
     private void Awake()
     {
@@ -114,7 +117,8 @@ public class FoodManager : MonoBehaviour
             {
                 Debug.Log("Correct");
                 ChooseIngredientUI.SetActive(false);
-                BurgerUI.SetActive(true);
+                ActivateBalanceCookingUI();
+                _cameraManager.SetCameraToCookingMode();
             }
         }
 
@@ -160,13 +164,15 @@ public class FoodManager : MonoBehaviour
         {
             foodparts.isInteractable = true;
         }
+    }
 
+    public void OnClickSetBeefInteractable()
+    {
         BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
         foreach (var beefSelection in beef)
         {
             beefSelection.isInteractable = true;
         }
-
     }
 
     public void OnFinishBalanceCook()
@@ -174,7 +180,6 @@ public class FoodManager : MonoBehaviour
         BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
         foreach (var beefSelection in beef)
         {
-            beefSelection.isMaked = true;
             beefSelection.isInteractable = true;
         }
     }
@@ -184,9 +189,9 @@ public class FoodManager : MonoBehaviour
         BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
         foreach (var beefSelection in beef)
         {
-            beefSelection.isCooked = true;
             beefSelection.isInteractable = true;
         }
+        _cameraManager.SetCameraToNormal();
     }
 
     void Warning(string messege)
@@ -206,6 +211,15 @@ public class FoodManager : MonoBehaviour
         balanceCookingResultText.text = _balanceCooking.scoreResult.ToString();
     }
     
-    
+    public void ActivateBalanceCookingUI()
+    {
+        balanceCookingUI.SetActive(true);
+    }
+
+    public void ActivateTimingCookingUI()
+    {
+        timingCookingUI.SetActive(true);
+    }
+
 
 }

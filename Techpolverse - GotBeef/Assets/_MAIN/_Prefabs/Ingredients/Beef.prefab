@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5279701791167646521}
   - component: {fileID: 1280897218}
   - component: {fileID: 1280897223}
-  - component: {fileID: 7485428746971005008}
+  - component: {fileID: -1511507103247195967}
   m_Layer: 0
   m_Name: Beef
   m_TagString: Food
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7485428746971005008
+--- !u!114 &-1511507103247195967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
