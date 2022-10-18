@@ -5,6 +5,7 @@ public class CookingResult : MonoBehaviour
 {
   public TextMeshProUGUI _scoreUI;
 
+  // public float scoreResult;
   public float scoreResult;
 
 

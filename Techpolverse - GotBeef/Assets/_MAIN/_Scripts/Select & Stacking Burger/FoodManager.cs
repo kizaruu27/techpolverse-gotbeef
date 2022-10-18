@@ -30,6 +30,9 @@ public class FoodManager : MonoBehaviour
     public GameObject BurgerUI;
     public GameObject WarningUI;
     public TextMeshProUGUI warningText;
+    public TextMeshProUGUI perfectCookingResultText;
+    public TextMeshProUGUI balanceCookingResultText;
+    public GameObject ResultUI;
 
     [Header("Recip Staging")]
     public List<string> RecipStaging;
@@ -37,6 +40,9 @@ public class FoodManager : MonoBehaviour
     [Header("Scriptable Value")]
     public ScriptableValue plateValue;
     public ItemDatabase _FoodDatabase;
+
+    [SerializeField] V1_CookingManager _perfectCooking;
+    [SerializeField] CookingResult _balanceCooking;
 
     private void Awake()
     {
@@ -93,12 +99,7 @@ public class FoodManager : MonoBehaviour
 
 
     #region FoodManager
-
-    private void Update()
-    {
-
-    }
-
+    
     public void FoodChecker()
     {
         var item = _FoodDatabase.foodList.Find((value) => value.foodName == GameFlow.instance.foodName);
@@ -122,9 +123,16 @@ public class FoodManager : MonoBehaviour
     public void BurgerCheck()
     {
         if (plateValue.value == GameFlow.instance.orderValue)
+        {
             Debug.Log("Correct");
+            ResultUI.SetActive(true);
+            DisplayPerfectCookingScore();
+            DisplayBalanceCookingScore();
+        }
         else
+        {
             Warning("Urutan burger salah!");
+        }
     }
 
     public void OnClickResetIngredients()
@@ -187,5 +195,17 @@ public class FoodManager : MonoBehaviour
         warningText.text = messege;
         Debug.Log("Wrong");
     }
+
+    void DisplayPerfectCookingScore()
+    {
+        _perfectCooking.DisplayPerfectTimingCooking(perfectCookingResultText);
+    }
+
+    void DisplayBalanceCookingScore()
+    {
+        balanceCookingResultText.text = _balanceCooking.scoreResult.ToString();
+    }
+    
+    
 
 }

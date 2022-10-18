@@ -6,7 +6,8 @@ public class CookingManager : MonoBehaviour
   [SerializeField] AreaController _area;
 
   [SerializeField] CookingTimer _timerUI;
-  [SerializeField] CookingResult _cookingResultUI;
+  [SerializeField] CookingResult _scoreResult;
+  [SerializeField] GameObject _cookingResultUI;
 
   private bool _isGameOver;
   private float _totalTimeInArea;
@@ -24,10 +25,11 @@ public class CookingManager : MonoBehaviour
       FoodManager.instance.OnBalanceCookingFinished.Invoke();
       
       _totalTimeInArea = _timerUI.timeInArea;
-      _cookingResultUI.gameObject.SetActive(true);
+      _cookingResultUI.SetActive(true);
+      _scoreResult.gameObject.SetActive(true);
 
       var score = float.Parse(_totalTimeInArea.ToString("0.00"));
-      _cookingResultUI.scoreResult = _timerUI.isDead ? ((score / 2) * 100) : (score * 100);
+      _scoreResult.scoreResult = _timerUI.isDead ? ((score / 2) * 100) : (score * 100);
     }
   }
 }

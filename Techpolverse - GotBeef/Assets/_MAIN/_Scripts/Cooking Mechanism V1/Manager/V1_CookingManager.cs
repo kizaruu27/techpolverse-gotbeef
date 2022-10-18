@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -142,5 +143,10 @@ public class V1_CookingManager : MonoBehaviour
             nextActionTime += period;
             sliderSpeed += speedDifficulty * Time.deltaTime;
         }
+    }
+
+    public void DisplayPerfectTimingCooking(TextMeshProUGUI messege)
+    {
+        messege.text = GenerateScore(GenerateStatusResult);
     }
 }
