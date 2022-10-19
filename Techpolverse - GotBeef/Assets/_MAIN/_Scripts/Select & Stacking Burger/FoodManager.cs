@@ -35,6 +35,8 @@ public class FoodManager : MonoBehaviour
     public GameObject ResultUI;
     public GameObject balanceCookingUI;
     public GameObject timingCookingUI;
+    public GameObject[] ingredientItems;
+    public Transform itemContainer;
 
     [Header("Recipe Staging")]
     public List<string> RecipStaging;
@@ -59,44 +61,73 @@ public class FoodManager : MonoBehaviour
 
     public void SetBottomBunValue()
     {
+        if (bottomBun < 1)
+        {
+            SpawnIngredientItemUI(0);
+        }
         bottomBun += 1;
-
         RecipStaging.Add("bottom bun");
     }
 
     public void SetMeatValue()
     {
+        if (beef < 1)
+        {
+            SpawnIngredientItemUI(1);
+        }
         beef += 1;
         RecipStaging.Add("beef");
     }
 
     public void SetCheeseValue()
     {
+        if (cheese < 1)
+        {
+            SpawnIngredientItemUI(2);
+        }
         cheese += 1;
         RecipStaging.Add("cheese");
     }
 
     public void SetTomatoValue()
     {
+        if (tomato < 1)
+        {
+            SpawnIngredientItemUI(3);
+
+        }
         tomato += 1;
         RecipStaging.Add("tomato");
     }
 
     public void SetCucumberValue()
     {
+        if (cucumber < 1)
+        {
+            SpawnIngredientItemUI(4);
+        }
         cucumber += 1;
         RecipStaging.Add("cucumber");
     }
 
     public void SetTopBunnValue()
     {
-        topBun = +1;
+        if (topBun < 1)
+        {
+            SpawnIngredientItemUI(5);
+        }
+        topBun += 1;
         RecipStaging.Add("top bun");
     }
 
     public void SetChickenBeef()
     {
+        if (chickenBeef < 1)
+        {
+            SpawnIngredientItemUI(6);
+        }
         chickenBeef += 1;
+
         RecipStaging.Add("chiken Beef");
     }
 
@@ -236,6 +267,11 @@ public class FoodManager : MonoBehaviour
     public void ActivateTimingCookingUI()
     {
         timingCookingUI.SetActive(true);
+    }
+
+    public void SpawnIngredientItemUI(int index)
+    {
+        Instantiate(ingredientItems[index], itemContainer.transform);
     }
 
 

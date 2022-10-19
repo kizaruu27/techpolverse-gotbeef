@@ -14,14 +14,19 @@ public class ScoreManager : MonoBehaviour
     public void GenerateBalanceCookingScore(TextMeshProUGUI scoreText)
     {
         // konversi score untuk balance cooking
-        if (_balanceCookingScore.scoreResult < 1000)
+        if (_balanceCookingScore.scoreResult > 80000)
         {
-            balanceScore = 10;
+            balanceScore = 3;
+            scoreText.text = balanceScore.ToString();
+        }
+        else if (_balanceCookingScore.scoreResult < 80000 && _balanceCookingScore.scoreResult > 40000)
+        {
+            balanceScore = 2;
             scoreText.text = balanceScore.ToString();
         }
         else
         {
-            balanceScore = 50;
+            balanceScore = 1;
             scoreText.text = balanceScore.ToString();
         }
         
