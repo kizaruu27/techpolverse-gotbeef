@@ -45,10 +45,10 @@ public class V1_CookingManager : MonoBehaviour
     {
         return _status switch
         {
-            AreaStatus.OverCook => "gosong",
-            AreaStatus.Raw => "belum mateng",
-            AreaStatus.Great => "great",
-            AreaStatus.Perfect => "perfect",
+            AreaStatus.OverCook => "Gosong",
+            AreaStatus.Raw => "Belum Matang",
+            AreaStatus.Great => "Great",
+            AreaStatus.Perfect => "Perfect",
             _ => "null"
         };
     }

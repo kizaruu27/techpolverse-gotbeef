@@ -36,16 +36,19 @@ public class FoodManager : MonoBehaviour
     public GameObject balanceCookingUI;
     public GameObject timingCookingUI;
 
-    [Header("Recip Staging")]
+    [Header("Recipe Staging")]
     public List<string> RecipStaging;
 
     [Header("Scriptable Value")]
     public ScriptableValue plateValue;
     public ItemDatabase _FoodDatabase;
 
+    [Header("Cooking Components")]
     [SerializeField] V1_CookingManager _perfectCooking;
     [SerializeField] CookingResult _balanceCooking;
     [SerializeField] CameraManager _cameraManager;
+    [SerializeField] ScoreManager _scoreManager;
+    
 
     private void Awake()
     {
@@ -130,8 +133,9 @@ public class FoodManager : MonoBehaviour
         {
             Debug.Log("Correct");
             ResultUI.SetActive(true);
+            _scoreManager.GenerateBalanceCookingScore(balanceCookingResultText);
             DisplayPerfectCookingScore();
-            DisplayBalanceCookingScore();
+            // DisplayBalanceCookingScore();
         }
         else
         {
