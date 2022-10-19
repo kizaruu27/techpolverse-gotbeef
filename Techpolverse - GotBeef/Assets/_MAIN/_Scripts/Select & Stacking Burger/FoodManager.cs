@@ -48,7 +48,7 @@ public class FoodManager : MonoBehaviour
     [SerializeField] CookingResult _balanceCooking;
     [SerializeField] CameraManager _cameraManager;
     [SerializeField] ScoreManager _scoreManager;
-    
+
 
     private void Awake()
     {
@@ -105,24 +105,37 @@ public class FoodManager : MonoBehaviour
 
 
     #region FoodManager
-    
+
     public void FoodChecker()
     {
         var item = _FoodDatabase.foodList.Find((value) => value.foodName == GameFlow.instance.foodName);
 
-        for (int i = 0; i < RecipStaging.Count; i++)
+        if (RecipStaging.Count > 0)
         {
-            if (!item.formulas.Contains(RecipStaging[i]))
+            for (int i = 0; i < RecipStaging.Count; i++)
             {
-                Warning($"Bahan {RecipStaging[i]} tidak sesuai!");
+                if (RecipStaging.Count < item.formulas.Length)
+                {
+                    Warning($"Bahan yang diperlukan kurang !!");
+                    Debug.Log("less material");
+                }
+                else if (!item.formulas.Contains(RecipStaging[i]))
+                {
+                    Warning($"Bahan {RecipStaging[i]} tidak sesuai!");
+                    Debug.Log("incorrect");
+                }
+                else
+                {
+                    Debug.Log("Correct");
+                    ChooseIngredientUI.SetActive(false);
+                    ActivateBalanceCookingUI();
+                    _cameraManager.SetCameraToCookingMode();
+                }
             }
-            else
-            {
-                Debug.Log("Correct");
-                ChooseIngredientUI.SetActive(false);
-                ActivateBalanceCookingUI();
-                _cameraManager.SetCameraToCookingMode();
-            }
+        }
+        else
+        {
+            Warning($" pilih bahan terlebih dahulu !!");
         }
 
     }
@@ -214,7 +227,7 @@ public class FoodManager : MonoBehaviour
     {
         balanceCookingResultText.text = _balanceCooking.scoreResult.ToString();
     }
-    
+
     public void ActivateBalanceCookingUI()
     {
         balanceCookingUI.SetActive(true);
