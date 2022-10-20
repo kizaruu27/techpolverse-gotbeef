@@ -6,7 +6,7 @@ public class SelectFood : MonoBehaviour
 {
     [Header("Spawn Points")]
     public Transform[] spawnPoints;
-    public Transform pattyPosition;
+    public Transform[] pattyPosition;
     
     [Header("Food Prefabs")]
     public GameObject[] foodPartsPrefabs;
@@ -14,6 +14,7 @@ public class SelectFood : MonoBehaviour
     public ScriptableValue plateValue;
 
     int spawnIndex;
+    int pattySpawnIndex;
 
 
     public void onClickSelectFood(int index)
@@ -31,14 +32,22 @@ public class SelectFood : MonoBehaviour
 
     public void onClickSelectPatty(int index)
     {
-        Instantiate(foodPartsPrefabs[index], pattyPosition.position, Quaternion.identity);
-        spawnIndex++;
+        if (pattySpawnIndex < pattyPosition.Length)
+        {
+            Instantiate(foodPartsPrefabs[index], pattyPosition[pattySpawnIndex].position, Quaternion.identity);
+            pattySpawnIndex++;
+        }
+        else
+        {
+            Debug.Log("Slot Patty Full!!");
+        }
     }
 
     public void onClickReset()
     {
         plateValue.value = null;
         spawnIndex = 0;
+        pattySpawnIndex = 0;
         GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
         foreach (GameObject food in foods)
         {

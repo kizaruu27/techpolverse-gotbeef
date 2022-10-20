@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     
     [Header("Cooking Components")]
     [SerializeField] CookingResult _balanceCookingScore;
-    [SerializeField] V1_CookingManager _perfectTimingCookingScore;
+    [SerializeField] GameObject[] starsUI;
 
     public void GenerateBalanceCookingScore(TextMeshProUGUI scoreText)
     {
@@ -17,17 +17,19 @@ public class ScoreManager : MonoBehaviour
         if (_balanceCookingScore.scoreResult > 80000)
         {
             balanceScore = 3;
-            scoreText.text = balanceScore.ToString();
         }
         else if (_balanceCookingScore.scoreResult < 80000 && _balanceCookingScore.scoreResult > 40000)
         {
             balanceScore = 2;
-            scoreText.text = balanceScore.ToString();
         }
         else
         {
             balanceScore = 1;
-            scoreText.text = balanceScore.ToString();
+        }
+
+        for (int i = 0; i < balanceScore; i++)
+        {
+            starsUI[i].SetActive(true);
         }
         
     }

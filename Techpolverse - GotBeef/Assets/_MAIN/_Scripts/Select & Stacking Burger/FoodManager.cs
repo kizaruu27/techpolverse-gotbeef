@@ -51,84 +51,154 @@ public class FoodManager : MonoBehaviour
     [SerializeField] CameraManager _cameraManager;
     [SerializeField] ScoreManager _scoreManager;
 
+    [Header("Ingredient Slot")]
+    public int slotMax;
+    int currentSlot;
+
+    public int pattySlotMax;
+    int currentPattySlot;
+
 
     private void Awake()
     {
         instance = this;
     }
 
+    private void Start()
+    {
+        currentSlot = 0;
+        currentPattySlot = 0;
+    }
+
     #region SetIngredientValue
 
     public void SetBottomBunValue()
     {
-        if (bottomBun < 1)
+        if (currentSlot < slotMax)
         {
-            SpawnIngredientItemUI(0);
+            currentSlot++;
+            if (bottomBun < 1)
+            {
+                SpawnIngredientItemUI(0);
+            }
+            bottomBun += 1;
+            RecipStaging.Add("bottom bun");
         }
-        bottomBun += 1;
-        RecipStaging.Add("bottom bun");
+        else
+        {
+            Debug.Log("Slot Full!");
+        }
     }
 
     public void SetMeatValue()
     {
-        if (beef < 1)
+        if (currentPattySlot < pattySlotMax)
         {
-            SpawnIngredientItemUI(1);
+            currentPattySlot++;
+            if (beef < 1)
+            {
+                SpawnIngredientItemUI(1);
+            }
+            beef += 1;
+            RecipStaging.Add("beef");
         }
-        beef += 1;
-        RecipStaging.Add("beef");
+        else
+        {
+            Debug.Log("Slot Full!");
+        }
     }
 
     public void SetCheeseValue()
     {
-        if (cheese < 1)
+        if (currentSlot < slotMax)
         {
-            SpawnIngredientItemUI(2);
+            currentSlot++;
+            if (cheese < 1)
+            {
+                SpawnIngredientItemUI(2);
+            }
+            cheese += 1;
+            RecipStaging.Add("cheese");
         }
-        cheese += 1;
-        RecipStaging.Add("cheese");
+        else
+        {
+            Debug.Log("Slot Full!");
+        }
     }
 
     public void SetTomatoValue()
     {
-        if (tomato < 1)
+        if (currentSlot < slotMax)
         {
-            SpawnIngredientItemUI(3);
+            currentSlot++;
+            if (tomato < 1)
+            {
+                SpawnIngredientItemUI(3);
 
+            }
+            tomato += 1;
+            RecipStaging.Add("tomato");
         }
-        tomato += 1;
-        RecipStaging.Add("tomato");
+        else
+        {
+            Debug.Log("Slot Full!");
+        }
     }
 
     public void SetCucumberValue()
     {
-        if (cucumber < 1)
+        if (currentSlot < slotMax)
         {
-            SpawnIngredientItemUI(4);
+            currentSlot++;
+            if (cucumber < 1)
+            {
+                SpawnIngredientItemUI(4);
+            }
+            cucumber += 1;
+            RecipStaging.Add("cucumber");
         }
-        cucumber += 1;
-        RecipStaging.Add("cucumber");
+        else
+        {
+            Debug.Log("Slot Full!");
+
+        }
     }
 
     public void SetTopBunnValue()
     {
-        if (topBun < 1)
+        if (currentSlot < slotMax)
         {
-            SpawnIngredientItemUI(5);
+            currentSlot++;
+            if (topBun < 1)
+            {
+                SpawnIngredientItemUI(5);
+            }
+            topBun += 1;
+            RecipStaging.Add("top bun");
         }
-        topBun += 1;
-        RecipStaging.Add("top bun");
+        else
+        {
+            Debug.Log("Slot Full!");
+        }
     }
 
     public void SetChickenBeef()
     {
-        if (chickenBeef < 1)
+        if (currentPattySlot < pattySlotMax)
         {
-            SpawnIngredientItemUI(6);
+            currentPattySlot++;
+            if (chickenBeef < 1)
+            {
+                SpawnIngredientItemUI(6);
+            }
+            chickenBeef += 1;
+            RecipStaging.Add("chiken Beef");
         }
-        chickenBeef += 1;
-
-        RecipStaging.Add("chiken Beef");
+        else
+        {
+            Debug.Log("Slot Full!");
+        }
+        
     }
 
     #endregion
@@ -196,6 +266,10 @@ public class FoodManager : MonoBehaviour
         cucumber = 0;
         topBun = 0;
         chickenBeef = 0;
+
+        RecipStaging.Clear();
+        currentSlot = 0;
+        currentPattySlot = 0;
     }
 
     public void ResetBurger()
