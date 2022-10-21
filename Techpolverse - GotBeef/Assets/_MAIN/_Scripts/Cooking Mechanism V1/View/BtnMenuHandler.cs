@@ -9,8 +9,12 @@ public class BtnMenuHandler : MonoBehaviour
     [Header("Components")]
     public int _btnIndex;
     public Image _image;
-    [FormerlySerializedAs("_FlowManager")] [Header("Flow Manager")]
+    
+    [Header("Flow Manager")]
     public V1_FlowManager v1FlowManager;
+
+    [Header("Description Panel")] 
+    public GameObject descriptionPanel;
 
     public string foodName;
     public string orderValue;
@@ -18,6 +22,7 @@ public class BtnMenuHandler : MonoBehaviour
     private void Start()
     {
         v1FlowManager = FindObjectOfType<V1_FlowManager>();
+        // descriptionPanel = GameObject.Find("");
     }
 
     public void SetMenuIndex()
