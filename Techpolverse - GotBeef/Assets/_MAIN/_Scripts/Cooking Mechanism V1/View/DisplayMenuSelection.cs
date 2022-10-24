@@ -16,7 +16,7 @@ public class DisplayMenuSelection : MonoBehaviour
     public int selectionIndex;
     public GameObject menuGrid;
     public Button btnMenuPrefab;
-    public GameObject btnSelection;
+    public GameObject panelRecipe;
 
 
     public void SetButtonSelection(List<Food> _foodList)
@@ -37,7 +37,7 @@ public class DisplayMenuSelection : MonoBehaviour
     {
         descriptionText.text = txt;
 
-        btnSelection.SetActive(true); // set gameobject btn
+        panelRecipe.SetActive(true); // set gameobject btn
     }
 
     public void OnOffMenuSelection(bool state)
