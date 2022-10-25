@@ -22,6 +22,7 @@ public class CookingManager : MonoBehaviour
     Debug.Log(_totalTimeInArea.ToString("0.00"));
     if (_isGameOver)
     {
+      Time.timeScale = 0;
       FoodManager.instance.OnBalanceCookingFinished.Invoke();
       
       _totalTimeInArea = _timerUI.timeInArea;
@@ -31,5 +32,10 @@ public class CookingManager : MonoBehaviour
       var score = float.Parse(_totalTimeInArea.ToString("0.00"));
       _scoreResult.scoreResult = _timerUI.isDead ? ((score / 2) * 100) : (score * 100);
     }
+  }
+
+  public void OnClickFinishCooking()
+  {
+    Time.timeScale = 1;
   }
 }

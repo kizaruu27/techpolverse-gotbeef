@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,14 +12,14 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] CookingResult _balanceCookingScore;
     [SerializeField] GameObject[] starsUI;
 
-    public void GenerateBalanceCookingScore(TextMeshProUGUI scoreText)
+    private void Update()
     {
         // konversi score untuk balance cooking
-        if (_balanceCookingScore.scoreResult > 80000)
+        if (_balanceCookingScore.scoreResult > 800)
         {
             balanceScore = 3;
         }
-        else if (_balanceCookingScore.scoreResult < 80000 && _balanceCookingScore.scoreResult > 40000)
+        else if (_balanceCookingScore.scoreResult < 800 && _balanceCookingScore.scoreResult > 400)
         {
             balanceScore = 2;
         }
@@ -26,7 +27,10 @@ public class ScoreManager : MonoBehaviour
         {
             balanceScore = 1;
         }
+    }
 
+    public void GenerateBalanceCookingScore(TextMeshProUGUI scoreText)
+    {
         for (int i = 0; i < balanceScore; i++)
         {
             starsUI[i].SetActive(true);
