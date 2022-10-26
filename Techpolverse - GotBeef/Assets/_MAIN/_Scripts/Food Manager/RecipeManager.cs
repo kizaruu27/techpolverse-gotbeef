@@ -18,8 +18,8 @@ public class RecipeManager : MonoBehaviour
     {
         for (int i = 0; i < foodDatabase.foodList[index].formulas.Length; i++)
         {
+            recipeItem.GetComponent<TextMeshProUGUI>().text = "~ " + foodDatabase.foodList[index].formulas[i];
             Instantiate(recipeItem, RecipeTransform);
-            recipeItem.GetComponent<TextMeshProUGUI>().text = foodDatabase.foodList[index].formulas[i];
         }
     }
 
