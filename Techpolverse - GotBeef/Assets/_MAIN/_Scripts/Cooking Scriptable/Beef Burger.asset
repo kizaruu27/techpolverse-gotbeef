@@ -22,4 +22,11 @@ MonoBehaviour:
   - cheese
   - beef
   - top bun
+  formulaImages:
+  - {fileID: 3913453105680289489, guid: 514a90c608e5cd5449362837f1669317, type: 3}
+  - {fileID: 3478816374237267711, guid: 4246be667dc6566438cb8428c5691d3b, type: 3}
+  - {fileID: 6643383096237408908, guid: 22e0f14b54e512a4a90d12f3f1c980b6, type: 3}
+  - {fileID: 8236543696251259756, guid: 4a7a7e7df10cd8243be601edc7c2867b, type: 3}
+  - {fileID: 2278387607201948372, guid: eca541201a8a2814eabbe6fc4f7eece5, type: 3}
+  - {fileID: 2000057206808503385, guid: 4bdb4164f21609840aa22abc68976ff6, type: 3}
   orderValue: 124567

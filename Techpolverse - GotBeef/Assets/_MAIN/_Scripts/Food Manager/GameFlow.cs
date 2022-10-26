@@ -13,6 +13,7 @@ public class GameFlow : MonoBehaviour
     public string orderValue;
     public string plateValue;
     public string foodName;
+    public int foodIndex;
 
     private void Awake()
     {

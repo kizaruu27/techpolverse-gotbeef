@@ -35,5 +35,6 @@ public class BtnMenuHandler : MonoBehaviour
     {
         GameFlow.instance.foodName = foodName;
         GameFlow.instance.orderValue = orderValue;
+        GameFlow.instance.foodIndex = _btnIndex;
     }
 }

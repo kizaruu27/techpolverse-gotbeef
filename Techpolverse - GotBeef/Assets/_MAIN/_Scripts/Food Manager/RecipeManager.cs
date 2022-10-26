@@ -7,14 +7,19 @@ public class RecipeManager : MonoBehaviour
 { 
     public GameObject recipeItem;
     public Transform RecipeTransform;
-    public Food foods;
+    public ItemDatabase foodDatabase;
 
     void Start()
     {
-        for (int i = 0; i < foods.formulas.Length; i++)
+        ShowRecipe(GameFlow.instance.foodIndex);
+    }
+
+    void ShowRecipe(int index)
+    {
+        for (int i = 0; i < foodDatabase.foodList[index].formulas.Length; i++)
         {
             Instantiate(recipeItem, RecipeTransform);
-            recipeItem.GetComponent<TextMeshProUGUI>().text = foods.formulas[i];
+            recipeItem.GetComponent<TextMeshProUGUI>().text = foodDatabase.foodList[index].formulas[i];
         }
     }
 
