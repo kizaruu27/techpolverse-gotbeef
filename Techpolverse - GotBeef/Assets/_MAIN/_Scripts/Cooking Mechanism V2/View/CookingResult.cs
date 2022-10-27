@@ -10,12 +10,14 @@ public class CookingResult : MonoBehaviour
   private float balanceScore;
   
   private void Start()
-  { 
-      if (scoreResult > 800)
+  {
+    // scoreResult = scoreResult / 100;
+    
+      if (scoreResult > 80)
       {
         balanceScore = 3;
       }
-      else if (scoreResult < 800 && scoreResult > 400)
+      else if (scoreResult < 80 && scoreResult > 40)
       {
         balanceScore = 2;
       }
@@ -29,6 +31,6 @@ public class CookingResult : MonoBehaviour
         stars[i].SetActive(true);
       }
     
-    // _scoreUI.text = "Score: " + (scoreResult * 100).ToString();
+    _scoreUI.text = "Score: " + (scoreResult).ToString();
   }
 }

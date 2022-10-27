@@ -15,11 +15,11 @@ public class ScoreManager : MonoBehaviour
     private void Update()
     {
         // konversi score untuk balance cooking
-        if (_balanceCookingScore.scoreResult > 800)
+        if (_balanceCookingScore.scoreResult > 80)
         {
             balanceScore = 3;
         }
-        else if (_balanceCookingScore.scoreResult < 800 && _balanceCookingScore.scoreResult > 400)
+        else if (_balanceCookingScore.scoreResult < 80 && _balanceCookingScore.scoreResult > 40)
         {
             balanceScore = 2;
         }
