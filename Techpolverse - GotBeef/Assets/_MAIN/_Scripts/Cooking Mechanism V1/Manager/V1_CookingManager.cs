@@ -29,6 +29,10 @@ public class V1_CookingManager : MonoBehaviour
     float duration;
     string stringTimer = "00:00";
 
+    [Header("Patty Material")] 
+    public Material rawPattyMaterial;
+    public Material overcookPattyMaterial;
+
     public AreaStatus GenerateStatusResult
     {
         get
@@ -148,5 +152,29 @@ public class V1_CookingManager : MonoBehaviour
     public void DisplayPerfectTimingCooking(TextMeshProUGUI messege)
     {
         messege.text = GenerateScore(GenerateStatusResult);
+    }
+
+    public void SetPattyResult()
+    {
+        if (StatusResult == AreaStatus.OverCook)
+        {
+            Debug.Log("Gosong");
+            changePattyMaterial(overcookPattyMaterial);
+        }
+        else if (StatusResult == AreaStatus.Raw)
+        {
+            Debug.Log("Mentah");
+            changePattyMaterial(rawPattyMaterial);
+        }
+        else
+        {
+            Debug.Log("Matang");
+        }
+    }
+
+    void changePattyMaterial(Material mat)
+    {
+        Renderer beef = GameObject.FindGameObjectWithTag("Beef").GetComponent<Renderer>();
+        beef.material = mat;
     }
 }

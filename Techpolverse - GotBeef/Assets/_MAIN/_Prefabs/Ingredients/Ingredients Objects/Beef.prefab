@@ -147,14 +147,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3207342449725258118, guid: f8b3bf93bc9d6c54c9a0187a2bbf5405, type: 3}
+      propertyPath: m_TagString
+      value: Beef
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f8b3bf93bc9d6c54c9a0187a2bbf5405, type: 3}
       propertyPath: m_Name
       value: Patty
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f8b3bf93bc9d6c54c9a0187a2bbf5405, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2479524853707183566, guid: f8b3bf93bc9d6c54c9a0187a2bbf5405, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 46a1b4a7e2a5a0f4eb7975dc9f0474ea, type: 2}
+      objectReference: {fileID: 2100000, guid: 5b3a51f55a1722f44a5bd051d3004bed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b3bf93bc9d6c54c9a0187a2bbf5405, type: 3}
 --- !u!4 &1163869310177784337 stripped

@@ -48,10 +48,17 @@ public class SelectFood : MonoBehaviour
         plateValue.value = null;
         spawnIndex = 0;
         pattySpawnIndex = 0;
+        
         GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
         foreach (GameObject food in foods)
         {
             Destroy(food);
+        }
+        
+        GameObject[] beef = GameObject.FindGameObjectsWithTag("Beef");
+        foreach (GameObject beefs in beef)
+        {
+            Destroy(beefs);
         }
 
         Ingredientitem[] items = FindObjectsOfType<Ingredientitem>();
