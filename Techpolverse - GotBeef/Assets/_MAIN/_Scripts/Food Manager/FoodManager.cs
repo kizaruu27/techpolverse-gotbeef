@@ -294,15 +294,6 @@ public class FoodManager : MonoBehaviour
         }
     }
 
-    public void OnClickSetBeefInteractable()
-    {
-        BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
-        foreach (var beefSelection in beef)
-        {
-            beefSelection.isInteractable = true;
-        }
-    }
-
     public void OnFinishBalanceCook()
     {
         BeefSelection[] beef = FindObjectsOfType<BeefSelection>();

@@ -36,6 +36,10 @@ public class CookingManager : MonoBehaviour
     }
     else
     {
+      if (!SoundManager.instance.audioOsurce.isPlaying)
+      {
+        SoundManager.instance.playSound(2);
+      }
       beef.PlayBeefAnimation();
     }
   }

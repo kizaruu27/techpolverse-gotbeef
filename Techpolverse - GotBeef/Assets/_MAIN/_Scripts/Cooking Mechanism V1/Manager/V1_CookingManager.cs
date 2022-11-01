@@ -82,7 +82,12 @@ public class V1_CookingManager : MonoBehaviour
     private void Update()
     {
         if (isPlay)
+        {
             slider.value = Mathf.PingPong(Time.time * sliderSpeed, 10f);
+            
+            if (!SoundManager.instance.audioOsurce.isPlaying)
+                SoundManager.instance.playSound(11);
+        }
 
         // Debug.Log(GenerateStatusResult);
 
@@ -96,6 +101,7 @@ public class V1_CookingManager : MonoBehaviour
         StartCoroutine(DisplayPopUpResult());
         FoodManager.instance.OnTimingCookingFinished.Invoke();
         ResetChallengeSetting();
+        SoundManager.instance.audioOsurce.Stop();
     }
 
     public IEnumerator DisplayPopUpResult()
