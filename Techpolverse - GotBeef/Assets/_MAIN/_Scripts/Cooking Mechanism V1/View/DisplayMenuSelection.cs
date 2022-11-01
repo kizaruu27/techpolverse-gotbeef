@@ -11,6 +11,7 @@ public class DisplayMenuSelection : MonoBehaviour
 
     [Header("Decription")]
     public TextMeshProUGUI descriptionText;
+    public Image foodImage;
 
     [Header("Components")]
     public int selectionIndex;
@@ -33,10 +34,11 @@ public class DisplayMenuSelection : MonoBehaviour
         }
     }
 
-    public void SetDescription(string txt)
+    public void SetDescription(string txt, Sprite image)
     {
         descriptionText.text = txt;
-
+        foodImage.sprite = image;
+        
         panelRecipe.SetActive(true); // set gameobject btn
     }
 

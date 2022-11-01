@@ -28,7 +28,7 @@ public class V1_FlowManager : MonoBehaviour
     public void ShowFoodDescription(int _index)
     {
         _foodIndex = _index;
-        _DisplayMenuSelection.SetDescription(_ItemDatabase.foodList[_index].foodName);
+        _DisplayMenuSelection.SetDescription(_ItemDatabase.foodList[_index].foodName, _ItemDatabase.foodList[_index].foodSprite);
     }
 
     //! Button function
