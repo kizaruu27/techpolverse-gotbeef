@@ -286,6 +286,12 @@ public class FoodManager : MonoBehaviour
         {
             foodparts.isInteractable = true;
         }
+        
+        BeefSelection[] beef = FindObjectsOfType<BeefSelection>();
+        foreach (var beefSelection in beef)
+        {
+            beefSelection.isInteractable = true;
+        }
     }
 
     public void OnClickSetBeefInteractable()
