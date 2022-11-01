@@ -957,7 +957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74473670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.044, y: 0, z: 1.09}
+  m_LocalPosition: {x: 2.7749999, y: 0, z: 1.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2998,7 +2998,7 @@ GameObject:
   - component: {fileID: 347498481}
   - component: {fileID: 347498482}
   m_Layer: 5
-  m_Name: Balance Cooking
+  m_Name: Balance Cooking Panel
   m_TagString: BalanceCookingUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4243,7 +4243,7 @@ GameObject:
   - component: {fileID: 566195578}
   - component: {fileID: 566195577}
   m_Layer: 5
-  m_Name: Perfect Timing Cooking
+  m_Name: Perfect Timing Cooking Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5485,7 +5485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738037872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.69899994, y: 0, z: 1.14}
+  m_LocalPosition: {x: 1.4299998, y: 0, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5950,7 +5950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808856045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 0, z: 1.14}
+  m_LocalPosition: {x: 0.17099994, y: 0, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6433,6 +6433,7 @@ GameObject:
   - component: {fileID: 886597038}
   - component: {fileID: 886597039}
   - component: {fileID: 886597040}
+  - component: {fileID: 886597041}
   m_Layer: 0
   m_Name: ------Game Manager
   m_TagString: GameManager
@@ -6504,6 +6505,7 @@ MonoBehaviour:
   - {fileID: 2537006823784377587, guid: 6e35ef55390d396408a767634b8c9159, type: 3}
   - {fileID: 3589446250781147200, guid: 3cff9868236def34b800a5f004a5d866, type: 3}
   - {fileID: 5279701791167646520, guid: 078aededf183d404ca132e09f4f6a362, type: 3}
+  - {fileID: 720500420513161007, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
 --- !u!114 &886597039
 MonoBehaviour:
@@ -6519,7 +6521,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnBalanceCookingFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 886597041}
+        m_TargetAssemblyTypeName: BeefMeshBehaviour, Assembly-CSharp
+        m_MethodName: SetBeef
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTimingCookingFinished:
     m_PersistentCalls:
       m_Calls:
@@ -6595,6 +6609,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balanceCookingUI: {fileID: 347498480}
   timingCookingUI: {fileID: 566195575}
+--- !u!114 &886597041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886597035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa57c85916534d4e877e0ac703d19a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beefPrefab: {fileID: 5279701791167646520, guid: 0caf53a38eb2dc94ea4ba2a0c3982d4b, type: 3}
+  chickenBeefPrefab: {fileID: 5279701791167646520, guid: 078aededf183d404ca132e09f4f6a362, type: 3}
+  spawnPoint: {fileID: 858982888}
 --- !u!1001 &894414316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11468,7 +11497,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11863,7 +11892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844762953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.69899994, y: 0, z: -0.0209997}
+  m_LocalPosition: {x: 1.43, y: 0, z: -0.0209997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12382,7 +12411,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -13052,7 +13081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997488523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 0, z: 2.236}
+  m_LocalPosition: {x: 0.17099994, y: 0, z: 2.236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13083,7 +13112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003395882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.69899994, y: 0, z: 2.236}
+  m_LocalPosition: {x: 1.4299998, y: 0, z: 2.236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13101,7 +13130,7 @@ GameObject:
   - component: {fileID: 2039622603}
   - component: {fileID: 2039622605}
   m_Layer: 5
-  m_Name: Dimmer
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13295,7 +13324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068023645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 0, z: -0.021}
+  m_LocalPosition: {x: 0.17099994, y: 0, z: -0.021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15027,6 +15056,7 @@ MonoBehaviour:
   _timerUI: {fileID: 9079269747820984154}
   _scoreResult: {fileID: 1186153097}
   _cookingResultUI: {fileID: 9079269746733521659}
+  beef: {fileID: 886597041}
 --- !u!1 &9079269747978886990
 GameObject:
   m_ObjectHideFlags: 0
@@ -15276,7 +15306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9079269748295098616}
   m_Layer: 5
-  m_Name: CookMechanismV2
+  m_Name: Balance Cooking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

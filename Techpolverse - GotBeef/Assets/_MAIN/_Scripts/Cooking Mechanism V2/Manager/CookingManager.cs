@@ -8,6 +8,7 @@ public class CookingManager : MonoBehaviour
   [SerializeField] CookingTimer _timerUI;
   [SerializeField] CookingResult _scoreResult;
   [SerializeField] GameObject _cookingResultUI;
+  [SerializeField] BeefMeshBehaviour beef;
 
   private bool _isGameOver;
   private float _totalTimeInArea;
@@ -22,8 +23,8 @@ public class CookingManager : MonoBehaviour
     Debug.Log(_totalTimeInArea.ToString("0.00"));
     if (_isGameOver)
     {
-      Time.timeScale = 0;
       FoodManager.instance.OnBalanceCookingFinished.Invoke();
+      Time.timeScale = 0;
       
       _totalTimeInArea = _timerUI.timeInArea;
       _cookingResultUI.SetActive(true);
@@ -32,6 +33,10 @@ public class CookingManager : MonoBehaviour
       var score = float.Parse(_totalTimeInArea.ToString("0.00"));
       _scoreResult.scoreResult = _timerUI.isDead ? ((score / 2) * 100) : (score * 100);
       _scoreResult.scoreResult /= 10;
+    }
+    else
+    {
+      beef.PlayBeefAnimation();
     }
   }
 
