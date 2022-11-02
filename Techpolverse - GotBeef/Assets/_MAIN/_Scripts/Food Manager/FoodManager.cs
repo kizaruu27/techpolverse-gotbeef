@@ -23,6 +23,8 @@ public class FoodManager : MonoBehaviour
         cheese,
         tomato,
         cucumber,
+        lettuce,
+        onion,
         topBun;
 
     [Header("UI Components")]
@@ -167,6 +169,44 @@ public class FoodManager : MonoBehaviour
 
         }
     }
+    
+    public void SetLettuceValue()
+    {
+        if (currentSlot < slotMax)
+        {
+            currentSlot++;
+            if (lettuce < 1)
+            {
+                SpawnIngredientItemUI(8);
+            }
+            lettuce += 1;
+            RecipStaging.Add("lettuce");
+        }
+        else
+        {
+            Debug.Log("Slot Full!");
+
+        }
+    }
+    
+    public void SetOnionValue()
+    {
+        if (currentSlot < slotMax)
+        {
+            currentSlot++;
+            if (onion < 1)
+            {
+                SpawnIngredientItemUI(7);
+            }
+            onion += 1;
+            RecipStaging.Add("onion");
+        }
+        else
+        {
+            Debug.Log("Slot Full!");
+
+        }
+    }
 
     public void SetTopBunnValue()
     {
@@ -232,9 +272,14 @@ public class FoodManager : MonoBehaviour
                 else
                 {
                     Debug.Log("Correct");
+                    
+                    Ingredientitem[] items = FindObjectsOfType<Ingredientitem>();
+                    foreach (var ingredientitem in items)
+                    {
+                        Destroy(ingredientitem.gameObject);
+                    }
+                    
                     ChooseIngredientUI.SetActive(false);
-                    
-                    
                     if (!isSpawned)
                     {
                         StartBalanceCooking();

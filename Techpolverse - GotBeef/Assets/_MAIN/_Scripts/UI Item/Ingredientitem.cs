@@ -14,7 +14,9 @@ public class Ingredientitem : MonoBehaviour
         ChickenBeef,
         tomato,
         cucumber,
-        cheese
+        cheese,
+        lettuce,
+        onion
     }
     
     [SerializeField] TextMeshProUGUI ingredientQtyText;
@@ -51,6 +53,13 @@ public class Ingredientitem : MonoBehaviour
             case Parts.ChickenBeef:
                 ingredientQtyText.text = _foodManager.chickenBeef.ToString();
                 break;
+            case Parts.lettuce:
+                ingredientQtyText.text = _foodManager.lettuce.ToString();
+                break;
+            case Parts.onion:
+                ingredientQtyText.text = _foodManager.onion.ToString();
+                break;
+            
         }
     }
 }

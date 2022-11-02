@@ -1459,14 +1459,14 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 886597039}
         m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
-        m_MethodName: SetCheeseValue
+        m_MethodName: SetOnionValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1552,7 +1552,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133246773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5761876, y: 1.5761876, z: 1.5761876}
   m_ConstrainProportionsScale: 0
@@ -1562,7 +1562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -202, y: -92.001}
+  m_AnchoredPosition: {x: -202.00012, y: -92.00106}
   m_SizeDelta: {x: 44.00586, y: 52.7493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133246775
@@ -6019,6 +6019,8 @@ MonoBehaviour:
   - {fileID: 5279701791167646520, guid: 078aededf183d404ca132e09f4f6a362, type: 3}
   - {fileID: 720500420513161007, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
   - {fileID: 720500420513161007, guid: 51089478e786e094888e031956083ddd, type: 3}
+  - {fileID: 892381019510631547, guid: b62950ea10ac8af4e9d36c4650b12da5, type: 3}
+  - {fileID: 2775966570273120556, guid: 26e0b14be3dfbc049bb3e5b1c98924fa, type: 3}
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
 --- !u!114 &886597039
 MonoBehaviour:
@@ -6080,6 +6082,8 @@ MonoBehaviour:
   cheese: 0
   tomato: 0
   cucumber: 0
+  lettuce: 0
+  onion: 0
   topBun: 0
   ChooseIngredientUI: {fileID: 163160}
   BurgerUI: {fileID: 844996099}
@@ -6098,6 +6102,8 @@ MonoBehaviour:
   - {fileID: 8892626693356577996, guid: 8679ff80c5a407d4e99dd48cdcfed49b, type: 3}
   - {fileID: 8892626693356577996, guid: 885d0d595f387d8438067dad77595f58, type: 3}
   - {fileID: 8892626693356577996, guid: d336f0953a671d2439beb1fbe7e7b06e, type: 3}
+  - {fileID: 8892626693356577996, guid: 7dd47366507052c41adc740adec6c314, type: 3}
+  - {fileID: 8892626693356577996, guid: 4c105d46b4d20f64f8cb6debf76021df, type: 3}
   itemContainer: {fileID: 1185770369}
   RecipStaging: []
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
@@ -7597,7 +7603,7 @@ GameObject:
   - component: {fileID: 1196632948}
   - component: {fileID: 1196632947}
   m_Layer: 5
-  m_Name: Salad_btn
+  m_Name: Lettuce_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7675,14 +7681,14 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 886597039}
         m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
-        m_MethodName: SetCheeseValue
+        m_MethodName: SetLettuceValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

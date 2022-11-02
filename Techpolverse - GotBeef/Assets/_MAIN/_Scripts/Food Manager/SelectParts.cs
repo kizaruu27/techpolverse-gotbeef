@@ -15,7 +15,9 @@ public class SelectParts : MonoBehaviour
       Cheese,
       Cucumber,
       Tomato,
-      TopBun
+      TopBun,
+      Lettuce,
+      Onion
    }
 
    [Header("Object Transform")]
@@ -69,7 +71,16 @@ public class SelectParts : MonoBehaviour
                DeactivateInteraction();
                SetFoodValue();
                break;
-            
+            case FoodParts.Lettuce:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               SetFoodValue();
+               break;
+            case FoodParts.Onion:
+               cloneObj.position = spawnPosition.position;
+               DeactivateInteraction();
+               SetFoodValue();
+               break;
          }
          
       }

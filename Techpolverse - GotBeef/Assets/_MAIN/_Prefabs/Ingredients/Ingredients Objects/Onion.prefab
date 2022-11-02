@@ -80,8 +80,8 @@ MonoBehaviour:
   isInteractable: 0
   cloneObj: {fileID: 892381019510631543}
   spawnPosition: {fileID: 0}
-  foodValue: 5
-  foodParts: 3
+  foodValue: 8
+  foodParts: 7
 --- !u!1001 &892381019989367054
 PrefabInstance:
   m_ObjectHideFlags: 0
