@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad90d1ddb9078bb4195bf6a00cfb59dd, type: 3}
-  m_Name: TimeInAreaValue
+  m_Name: BalanceCookingScore
   m_EditorClassIdentifier: 
   value: 
-  floatValue: 0
+  intValue: 0

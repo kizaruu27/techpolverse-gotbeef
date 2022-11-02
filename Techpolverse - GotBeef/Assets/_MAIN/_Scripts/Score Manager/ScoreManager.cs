@@ -9,17 +9,17 @@ public class ScoreManager : MonoBehaviour
     public float balanceScore;
     
     [Header("Cooking Components")]
-    [SerializeField] CookingResult _balanceCookingScore;
+    [SerializeField] ScriptableValue _balanceCookingScore;
     [SerializeField] GameObject[] starsUI;
 
     private void Update()
     {
         // konversi score untuk balance cooking
-        if (_balanceCookingScore.scoreResult > 80)
+        if (_balanceCookingScore.floatValue > 80)
         {
             balanceScore = 3;
         }
-        else if (_balanceCookingScore.scoreResult < 80 && _balanceCookingScore.scoreResult > 40)
+        else if (_balanceCookingScore.floatValue < 80 && _balanceCookingScore.floatValue > 40)
         {
             balanceScore = 2;
         }
@@ -38,8 +38,9 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-    public void GeneratePerfectTimingScore()
+    public void ResetScore()
     {
-        // konversi score perfect timing cooking
+        _balanceCookingScore.floatValue = 0;
+        BeefMeshBehaviour.instance.isSpawning = false;
     }
 }

@@ -4,11 +4,10 @@ public class CookingManager : MonoBehaviour
 {
   [SerializeField] CookingController _cooking;
   [SerializeField] AreaController _area;
-
+  [SerializeField] GameObject balanceCookingPanel;
   [SerializeField] CookingTimer _timerUI;
   [SerializeField] CookingResult _scoreResult;
   [SerializeField] GameObject _cookingResultUI;
-  [SerializeField] BeefMeshBehaviour beef;
 
   private bool _isGameOver;
   private float _totalTimeInArea;
@@ -40,6 +39,8 @@ public class CookingManager : MonoBehaviour
       {
         SoundManager.instance.playSound(2);
       }
+      
+      BeefMeshBehaviour beef = FindObjectOfType<BeefMeshBehaviour>();
       beef.PlayBeefAnimation();
     }
   }
@@ -47,5 +48,6 @@ public class CookingManager : MonoBehaviour
   public void OnClickFinishCooking()
   {
     Time.timeScale = 1;
+    Destroy(balanceCookingPanel);
   }
 }

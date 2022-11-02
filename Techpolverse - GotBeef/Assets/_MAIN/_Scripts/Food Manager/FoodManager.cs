@@ -54,14 +54,18 @@ public class FoodManager : MonoBehaviour
     [Header("Ingredient Slot")]
     public int slotMax;
     int currentSlot;
-
     public int pattySlotMax;
     int currentPattySlot;
+
+    public GameObject balanceCookingPrefab;
+
+    private bool isSpawned;
 
 
     private void Awake()
     {
         instance = this;
+        isSpawned = false;
     }
 
     private void Start()
@@ -229,7 +233,14 @@ public class FoodManager : MonoBehaviour
                 {
                     Debug.Log("Correct");
                     ChooseIngredientUI.SetActive(false);
-                    ActivateBalanceCookingUI();
+                    
+                    
+                    if (!isSpawned)
+                    {
+                        StartBalanceCooking();
+                        isSpawned = true;
+                    }
+                    
                     _cameraManager.SetCameraToCookingMode();
                 }
             }
@@ -275,6 +286,7 @@ public class FoodManager : MonoBehaviour
     public void ResetBurger()
     {
         plateValue.value = null;
+        isSpawned = false;
     }
 
     #endregion
@@ -344,6 +356,15 @@ public class FoodManager : MonoBehaviour
     {
         Instantiate(ingredientItems[index], itemContainer.transform);
     }
+
+    #region Initiate Cooking
+
+    public void StartBalanceCooking()
+    {
+        Instantiate(balanceCookingPrefab, FindObjectOfType<Canvas>().transform);
+    }
+
+    #endregion
 
 
 }

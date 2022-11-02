@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class BeefMeshBehaviour : MonoBehaviour
 {
+    public static BeefMeshBehaviour instance;
+    
     public GameObject beefPrefab;
     public GameObject chickenBeefPrefab;
     Animator beefAnim;
     
-    private bool isSpawning;
+    [HideInInspector]
+    public bool isSpawning;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -18,7 +26,8 @@ public class BeefMeshBehaviour : MonoBehaviour
 
     public void SetBeef()
     {
-        RawMeet rawBeef = GameObject.FindGameObjectWithTag("Beef").GetComponent<RawMeet>();
+        Debug.Log("test");
+        RawMeet rawBeef = FindObjectOfType<RawMeet>();
 
         if (!isSpawning)
         {

@@ -9,7 +9,9 @@ public class ScriptableValue : ScriptableObject
     private void OnEnable()
     {
         value = null;
+        floatValue = 0;
     }
 
     public string value;
+    public float floatValue;
 }

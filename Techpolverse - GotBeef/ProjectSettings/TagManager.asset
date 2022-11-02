@@ -12,6 +12,7 @@ TagManager:
   - MakePatty
   - BalanceCookingUI
   - Beef
+  - Perfect Timing
   layers:
   - Default
   - TransparentFX

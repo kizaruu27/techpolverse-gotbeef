@@ -5,6 +5,7 @@ public class CookingResult : MonoBehaviour
 {
   public TextMeshProUGUI _scoreUI;
   public float scoreResult;
+  public ScriptableValue balanceCookingScore;
 
   public GameObject[] stars;
   private float balanceScore;
@@ -30,6 +31,9 @@ public class CookingResult : MonoBehaviour
       {
         stars[i].SetActive(true);
       }
+
+      balanceCookingScore.floatValue = scoreResult;
+      
     
     _scoreUI.text = "Score: " + (scoreResult).ToString();
   }
