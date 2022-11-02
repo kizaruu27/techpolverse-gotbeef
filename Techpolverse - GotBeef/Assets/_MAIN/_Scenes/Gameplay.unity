@@ -5925,7 +5925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858982887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39600018, y: 0, z: 0}
+  m_LocalPosition: {x: -0.34, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9273,6 +9273,7 @@ MonoBehaviour:
   cam: {fileID: 963194228}
   normalPos: {fileID: 337059615}
   cookingPos: {fileID: 2101960544}
+  cookingTarget: {fileID: 858982888}
 --- !u!1 &1559893674
 GameObject:
   m_ObjectHideFlags: 0
