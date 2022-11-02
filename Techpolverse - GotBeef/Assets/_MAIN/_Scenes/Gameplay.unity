@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 163161}
   m_Layer: 5
-  m_Name: Choose Ingredient
+  m_Name: 3_Choose Ingredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ RectTransform:
   - {fileID: 133246774}
   - {fileID: 1109908452}
   m_Father: {fileID: 1687263287}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 40679142}
   - component: {fileID: 40679141}
   m_Layer: 5
-  m_Name: Btn_Cancel
+  m_Name: Btn_Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,6 +487,54 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
         m_MethodName: ResetBurger
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 886597038}
+        m_TargetAssemblyTypeName: SelectFood, Assembly-CSharp
+        m_MethodName: onClickReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 886597039}
+        m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
+        m_MethodName: OnClickResetIngredients
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 494596891}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 844996099}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -878,7 +926,7 @@ Transform:
   - {fileID: 858982888}
   - {fileID: 758128979}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73044641
 GameObject:
@@ -1021,7 +1069,7 @@ RectTransform:
   m_Children:
   - {fileID: 669590137}
   m_Father: {fileID: 844996100}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -1421,6 +1469,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 778456939}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &115665754
 MonoBehaviour:
@@ -2713,7 +2773,7 @@ Transform:
   m_Children:
   - {fileID: 1669314872}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &253832978
 BoxCollider:
@@ -2950,6 +3010,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 73044641}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9079269746733521659}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9079269747820984154}
+        m_TargetAssemblyTypeName: CookingTimer, Assembly-CSharp
+        m_MethodName: resetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320328467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3009,7 +3105,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346597824
 GameObject:
@@ -3135,7 +3231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &347498481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3143,14 +3239,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347498480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2039622603}
-  m_Father: {fileID: 1687263287}
-  m_RootOrder: 5
+  m_Father: {fileID: 1787761118}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3284,6 +3380,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 2a5f19a29ee17a14386efbcef35a13c9, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9079269746733521659}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3557,7 +3665,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413291285
 GameObject:
@@ -3879,7 +3987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494596892}
   m_Layer: 5
-  m_Name: Home UI
+  m_Name: 1_Home UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4411,7 +4519,7 @@ GameObject:
   - component: {fileID: 566195578}
   - component: {fileID: 566195577}
   m_Layer: 5
-  m_Name: Perfect Timing Cooking Panel
+  m_Name: 5_Perfect Timing Cooking Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4434,7 +4542,7 @@ RectTransform:
   - {fileID: 1578116664}
   - {fileID: 73044642}
   m_Father: {fileID: 1687263287}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5283,7 +5391,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &716300531
 GameObject:
@@ -5426,7 +5534,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &726390713
 PrefabInstance:
@@ -5839,7 +5947,7 @@ Transform:
   - {fileID: 1844762954}
   - {fileID: 74473671}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775787105
 GameObject:
@@ -6222,7 +6330,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818399774
 GameObject:
@@ -6344,6 +6452,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 73044641}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818399777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6382,6 +6502,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818399774}
   m_CullTransparentMesh: 1
+--- !u!1001 &828432448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 860.42114
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -201.44263
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.245
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161004, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720500420513161007, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+      propertyPath: m_Name
+      value: Raw Beef
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
 --- !u!1 &844996099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6392,7 +6569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844996100}
   m_Layer: 5
-  m_Name: Burger UI
+  m_Name: 6_Burger UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6410,13 +6587,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 75600724}
   - {fileID: 1227551648}
+  - {fileID: 75600724}
   - {fileID: 40679140}
   - {fileID: 700834190}
   - {fileID: 716300532}
   m_Father: {fileID: 1687263287}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6700,7 +6877,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &886597038
 MonoBehaviour:
@@ -6723,8 +6900,8 @@ MonoBehaviour:
   - {fileID: 1844762954}
   - {fileID: 74473671}
   pattyPosition:
-  - {fileID: 1503646270}
   - {fileID: 858982888}
+  - {fileID: 1503646270}
   - {fileID: 758128979}
   foodPartsPrefabs:
   - {fileID: 1606265955039925644, guid: 1f5d164aee3d1e044b4d2045edde58fc, type: 3}
@@ -6735,6 +6912,7 @@ MonoBehaviour:
   - {fileID: 3589446250781147200, guid: 3cff9868236def34b800a5f004a5d866, type: 3}
   - {fileID: 5279701791167646520, guid: 078aededf183d404ca132e09f4f6a362, type: 3}
   - {fileID: 720500420513161007, guid: fab15891759420d42b4e81e13fe69bd1, type: 3}
+  - {fileID: 720500420513161007, guid: 51089478e786e094888e031956083ddd, type: 3}
   plateValue: {fileID: 11400000, guid: 1edfa93d76a7fd449940891e7d26c96d, type: 2}
 --- !u!114 &886597039
 MonoBehaviour:
@@ -6852,7 +7030,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beefPrefab: {fileID: 5279701791167646520, guid: 0caf53a38eb2dc94ea4ba2a0c3982d4b, type: 3}
   chickenBeefPrefab: {fileID: 5279701791167646520, guid: 078aededf183d404ca132e09f4f6a362, type: 3}
-  spawnPoint: {fileID: 858982888}
 --- !u!1001 &894414316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7152,7 +7329,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975998626
 GameObject:
@@ -8331,7 +8508,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190796490
 GameObject:
@@ -8359,18 +8536,18 @@ RectTransform:
   m_GameObject: {fileID: 1190796490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9862464, y: 1.5408189, z: 1.111251}
+  m_LocalScale: {x: 1.840533, y: 2.8754761, z: 2.0738165}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 859369978}
   - {fileID: 674014888}
   - {fileID: 187603607}
-  m_Father: {fileID: 9079269748295098616}
+  m_Father: {fileID: 2039622603}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -18.3}
+  m_AnchoredPosition: {x: 0, y: -234}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190796492
@@ -8543,6 +8720,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 778456939}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1195389284
 MonoBehaviour:
@@ -8849,7 +9038,7 @@ RectTransform:
   m_Children:
   - {fileID: 50849521}
   m_Father: {fileID: 844996100}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -9087,7 +9276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296851156}
   m_Layer: 5
-  m_Name: Warning Panel
+  m_Name: 7_Warning Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9513,7 +9702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1387371873}
   m_Layer: 5
-  m_Name: Result Panel
+  m_Name: 8_Result Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10023,7 +10212,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503213316
 GameObject:
@@ -10227,17 +10416,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1688211328}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 886597039}
+        m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
+        m_MethodName: OnClickResetIngredients
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1789286320}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
@@ -10250,6 +10439,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1688211328}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 163160}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -10433,7 +10634,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1535882777
 MonoBehaviour:
@@ -11041,7 +11242,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620181545
 GameObject:
@@ -11465,10 +11666,10 @@ RectTransform:
   m_Children:
   - {fileID: 494596892}
   - {fileID: 1688211329}
-  - {fileID: 566195576}
   - {fileID: 163161}
+  - {fileID: 1787761118}
+  - {fileID: 566195576}
   - {fileID: 844996100}
-  - {fileID: 347498481}
   - {fileID: 1296851156}
   - {fileID: 1387371873}
   m_Father: {fileID: 0}
@@ -11551,7 +11752,7 @@ GameObject:
   - component: {fileID: 1688211329}
   - component: {fileID: 1688211330}
   m_Layer: 5
-  m_Name: Display Menu
+  m_Name: 2_Display Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11923,7 +12124,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772536705
 GameObject:
@@ -12016,7 +12217,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12162,6 +12363,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780798983}
   m_CullTransparentMesh: 1
+--- !u!1 &1787761117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787761118}
+  m_Layer: 5
+  m_Name: 4_Balance Cooking Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1787761118
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787761117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 347498481}
+  - {fileID: 9079269746733521656}
+  m_Father: {fileID: 1687263287}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1789286319
 GameObject:
   m_ObjectHideFlags: 0
@@ -12289,7 +12528,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1789286322
 MonoBehaviour:
@@ -13372,6 +13611,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 886597038}
+        m_TargetAssemblyTypeName: SelectFood, Assembly-CSharp
+        m_MethodName: onClickReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 886597038}
+        m_TargetAssemblyTypeName: SelectFood, Assembly-CSharp
+        m_MethodName: onClickResetBurger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 886597039}
+        m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
+        m_MethodName: OnClickResetIngredients
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 886597039}
+        m_TargetAssemblyTypeName: FoodManager, Assembly-CSharp
+        m_MethodName: ResetBurger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1918544738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13982,7 +14269,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9079269748295098616}
+  - {fileID: 9079269747978886991}
+  - {fileID: 1190796491}
+  - {fileID: 9079269748372246891}
+  - {fileID: 9079269747820984159}
   m_Father: {fileID: 347498481}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14264,13 +14554,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101960543}
-  m_LocalRotation: {x: -0.54493284, y: 0.00050074863, z: -0.00032560385, w: -0.8384795}
-  m_LocalPosition: {x: -14.066, y: 5.845, z: 4.173}
+  m_LocalRotation: {x: -0.34553614, y: -0.00084723555, z: 0.0003117996, w: -0.9384051}
+  m_LocalPosition: {x: -14.321, y: 2.645, z: 4.306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111186890
 GameObject:
@@ -15072,19 +15362,19 @@ RectTransform:
   m_GameObject: {fileID: 9079269746733521659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8662, y: 1.8662, z: 1.8662}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4758672459136220894}
   - {fileID: 1277940123}
   - {fileID: 171940293}
-  m_Father: {fileID: 9079269748295098616}
-  m_RootOrder: 4
+  m_Father: {fileID: 1787761118}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -179}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9079269746733521657
 MonoBehaviour:
@@ -15128,7 +15418,7 @@ GameObject:
   - component: {fileID: 9079269746733521606}
   - component: {fileID: 9079269746733521657}
   m_Layer: 5
-  m_Name: Result Panel
+  m_Name: Result Panel_Balance Cooking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15823,15 +16113,15 @@ RectTransform:
   m_GameObject: {fileID: 9079269747820984158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8662, y: 1.8662, z: 1.8662}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9079269748295098616}
+  m_Father: {fileID: 2039622603}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 110.7}
+  m_AnchoredPosition: {x: 0, y: 206.5883}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9079269747978886988
@@ -15930,19 +16220,19 @@ RectTransform:
   m_GameObject: {fileID: 9079269747978886990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7685369, y: 1.936617, z: 1.7685369}
+  m_LocalScale: {x: 3.3004436, y: 3.6141145, z: 3.3004436}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9079269748064123090}
   - {fileID: 9079269746581490758}
   - {fileID: 9079269746981788653}
   - {fileID: 9079269747428990471}
-  m_Father: {fileID: 9079269748295098616}
+  m_Father: {fileID: 2039622603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 16.699993}
+  m_AnchoredPosition: {x: 0, y: -168.68303}
   m_SizeDelta: {x: 332.4, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9079269748064123090
@@ -16117,47 +16407,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 125}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &9079269748295098616
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9079269748295098619}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8662, y: 1.8662, z: 1.8662}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 9079269747978886991}
-  - {fileID: 1190796491}
-  - {fileID: 9079269748372246891}
-  - {fileID: 9079269747820984159}
-  - {fileID: 9079269746733521656}
-  m_Father: {fileID: 2039622603}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -179}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &9079269748295098619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9079269748295098616}
-  m_Layer: 5
-  m_Name: Balance Cooking
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &9079269748372246888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16284,16 +16533,16 @@ RectTransform:
   m_GameObject: {fileID: 9079269748372246890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8662, y: 1.8662, z: 1.8662}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9079269747678051025}
-  m_Father: {fileID: 9079269748295098616}
+  m_Father: {fileID: 2039622603}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 416}
+  m_AnchoredPosition: {x: 0, y: 176.091}
   m_SizeDelta: {x: 212.3846, y: 39.822113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9079269748372246902

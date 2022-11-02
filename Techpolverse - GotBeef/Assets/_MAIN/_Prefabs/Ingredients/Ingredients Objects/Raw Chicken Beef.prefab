@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6531302067397334479}
   - component: {fileID: -8492267603070800953}
   m_Layer: 0
-  m_Name: Raw Beef
+  m_Name: Raw Chicken Beef
   m_TagString: Beef
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c18a2294687b0419cc949660a83aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parts: 0
+  parts: 1
 --- !u!1001 &720500421381859816
 PrefabInstance:
   m_ObjectHideFlags: 0

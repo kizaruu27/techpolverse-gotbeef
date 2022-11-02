@@ -10,7 +10,8 @@ public class BeefSelection : MonoBehaviour
 
     public enum FoodParts
     {
-       Beef
+       Beef,
+       ChickenBeef
     }
     
     [Header("Object Transform")]

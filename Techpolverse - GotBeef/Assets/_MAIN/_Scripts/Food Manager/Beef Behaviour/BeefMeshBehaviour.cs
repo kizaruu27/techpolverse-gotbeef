@@ -7,7 +7,6 @@ public class BeefMeshBehaviour : MonoBehaviour
 {
     public GameObject beefPrefab;
     public GameObject chickenBeefPrefab;
-    public Transform spawnPoint;
     Animator beefAnim;
     
     private bool isSpawning;
@@ -19,13 +18,22 @@ public class BeefMeshBehaviour : MonoBehaviour
 
     public void SetBeef()
     {
-        GameObject rawBeef = GameObject.FindGameObjectWithTag("Beef");
+        RawMeet rawBeef = GameObject.FindGameObjectWithTag("Beef").GetComponent<RawMeet>();
 
         if (!isSpawning)
         {
-            Instantiate(beefPrefab, spawnPoint.position, Quaternion.identity);
-            Destroy(rawBeef);
-            isSpawning = true;
+            if (rawBeef.parts == RawMeet.BurgerParts.Beef)
+            {
+                Instantiate(beefPrefab, rawBeef.transform.position, Quaternion.identity);
+                Destroy(rawBeef.gameObject);
+                isSpawning = true;
+            }
+            else if (rawBeef.parts == RawMeet.BurgerParts.ChickenBeef)
+            {
+                Instantiate(chickenBeefPrefab, rawBeef.transform.position, Quaternion.identity);
+                Destroy(rawBeef.gameObject);
+                isSpawning = true;
+            }
         }
     }
 

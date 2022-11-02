@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -22,8 +23,7 @@ public class CookingTimer : MonoBehaviour
         ShowTime();
         InGameFinish();
     }
-
-
+    
     void GetTime()
     {
         timeInArea = isPointerInArea ?
@@ -46,5 +46,4 @@ public class CookingTimer : MonoBehaviour
         isDead = time >= _deadTime;
         isFinish = timeInArea >= _finishTime;
     }
-
 }
